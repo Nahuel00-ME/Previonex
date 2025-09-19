@@ -1,0 +1,176 @@
+.navbarC{
+  position: relative;
+  height: 75vh;  /* ocupa toda la pantalla */
+  background-image: url("/images/capacitacion.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.navbarC::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4); /* overlay para legibilidad */
+  z-index: 1;
+}
+
+.overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 20px;
+}
+
+.titulo-navbarC h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.texto-top p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   CAPACITACIONES
+========================= */
+.section--capacitaciones {
+  background: linear-gradient(to right, #f0f8ff, #e6f7ff);
+  padding: 80px 20px;
+  border-left: 6px solid #00c3ff;
+  border-radius: 8px;
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.section--capacitaciones .section__title {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #00aaff;
+  margin-bottom: 25px;
+}
+
+.section--capacitaciones .section__intro {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  max-width: 850px;
+  margin: 0 auto 30px auto;
+}
+
+.capacitaciones-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 25px;
+}
+
+.capacitaciones-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.capacitaciones-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #00c3ff;
+  font-weight: bold;
+}
+
+.capacitaciones-list li:hover {
+  color: #00aaff;
+  transform: translateX(5px);
+}
+
+.capacitaciones-extra {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .section--capacitaciones {
+    padding: 60px 15px;
+  }
+
+  .section--capacitaciones .section__title {
+    font-size: 2rem;
+  }
+
+  .capacitaciones-list li {
+    font-size: 0.95rem;
+  }
+
+  .capacitaciones-extra {
+    font-size: 0.95rem;
+  }
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(6, 95, 70, 0.95); /* verde sólido para móvil */
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li a {
+    width: 100%;
+    text-align: left;
+  }
+
+  .navbarC {
+    height: 60vh; /* hero más pequeño en tablet */
+    padding: 0 15px;
+  }
+
+  .titulo-navbarC h2 {
+    font-size: 1.8rem;
+  }
+
+  .texto-navbarC p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-navbarC h2 {
+    font-size: 1.4rem;
+  }
+
+  .texto-navbarC p {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,186 @@
+.navbar-Proteccion {
+  position: relative;
+  height: 75vh;  /* ocupa toda la pantalla */
+  background-image: url("/images/bomberosPP");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-Proteccion::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4); /* overlay para legibilidad */
+  z-index: 1;
+}
+
+.titulo-navbarProteccion h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+/* =========================
+   PROTECCIÓN CONTRA INCENDIOS
+========================= */
+.section--proteccion {
+  background: #f9fbfd;
+  padding: 80px 20px;
+}
+
+.section--proteccion .section__title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+  color: #e63946; /* rojo profesional */
+}
+
+/* Layout en dos columnas */
+.proteccion-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Columna izquierda: acordeón */
+.proteccion-acordeon {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.acordeon-item {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  border-left: 5px solid #e63946;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.acordeon-title {
+  width: 100%;
+  padding: 15px 20px;
+  background: #fff;
+  border: none;
+  outline: none;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.acordeon-title:hover {
+  background: rgba(230, 57, 70, 0.08);
+}
+
+.acordeon-content {
+  max-height: 0;           /* empieza cerrado */
+  overflow: hidden;
+  padding: 0 20px;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.acordeon-item.active .acordeon-content {
+  max-height: 500px;       /* suficiente para contenido más largo */
+  padding: 15px 20px;      /* agrega padding al abrir */
+}
+
+/* Columna derecha: imagen */
+.proteccion-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* Sección extra */
+.proteccion-detalle {
+  margin-top: 50px;
+  padding: 25px 30px;
+  background: #fff3f3;
+  border-left: 6px solid #e63946;
+  border-radius: 8px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.proteccion-detalle h3 {
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+.proteccion-detalle p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+  .proteccion-container {
+    grid-template-columns: 1fr;
+  }
+
+  .proteccion-imagen {
+    order: -1; /* imagen arriba en móviles */
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(6, 95, 70, 0.95); /* verde sólido para móvil */
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li a {
+    width: 100%;
+    text-align: left;
+  }
+
+  .navbar-Proteccion {
+    height: 60vh; /* hero más pequeño en tablet */
+    padding: 0 15px;
+  }
+
+  .titulo-navbarProteccion h2 {
+    font-size: 1.8rem;
+  }
+
+  
+}
+
+@media (max-width: 480px) {
+  .titulo-navbarProteccion h2 {
+    font-size: 1.4rem;
+  }
+
+}

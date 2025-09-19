@@ -1,0 +1,85 @@
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-form .input-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 40px 12px 15px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  background: #fff; /* Blanco como las cards */
+  color: #333;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #00c3ff;
+  box-shadow: 0 0 8px rgba(0,195,255,0.3);
+}
+
+/* Iconos de validación */
+.valid-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  pointer-events: none;
+}
+
+.input-group input.valid,
+.input-group textarea.valid {
+  border-color: #00c3ff;
+}
+
+.input-group input.invalid,
+.input-group textarea.invalid {
+  border-color: #f44336;
+}
+
+/* Iconos ✔ y ✖ */
+.input-group input.valid + .valid-icon,
+.input-group textarea.valid + .valid-icon {
+  color: #00c3ff;
+}
+
+.input-group input.invalid + .valid-icon,
+.input-group textarea.invalid + .valid-icon {
+  color: #f44336;
+}
+
+/* Botón */
+.contact-form button {
+  padding: 12px 20px;
+  background: #00c3ff;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: #00a6e0;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-form {
+    margin: 0 20px;
+  }
+}
+

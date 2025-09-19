@@ -1,0 +1,160 @@
+.navbar-servicios {
+  position: relative;
+  height: 75vh;  /* ocupa toda la pantalla */
+  background-image: url("/images/servicios.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.navbar-servicios::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.2);
+  z-index: 1;
+}
+
+.overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 20px;
+}
+
+.titulo-servicios h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.texto-servicios p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   SECCIÓN SERVICIOS
+========================= */
+.section--services {
+  background: #f9fbfd;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section--services .section__title {
+  font-size: 2.4rem;
+  color: #00aaff;
+  margin-bottom: 20px;
+}
+
+.section--services .section__intro {
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* =========================
+   LISTA DE SERVICIOS
+========================= */
+.services-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* =========================
+   CADA SERVICIO
+========================= */
+.service {
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px 30px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, #00c3ff, #0086ff);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 195, 255, 0.2);
+}
+
+.service:hover::before {
+  opacity: 1;
+}
+
+.service__title {
+  font-size: 1.3rem;
+  color: #00aaff;
+  margin-bottom: 12px;
+}
+
+.service__text {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .section--services .section__title {
+    font-size: 2rem;
+  }
+
+  .service {
+    padding: 20px;
+  }
+
+  .service__title {
+    font-size: 1.15rem;
+  }
+  
+  .navbar-servicios {
+    height: 60vh; /* hero más pequeño en tablet */
+    padding: 0 15px;
+  }
+
+  .titulo-servicios h2 {
+    font-size: 1.8rem;
+  }
+
+  .texto-servicios p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-servicios h2 {
+    font-size: 1.4rem;
+  }
+
+  .texto-servicios p {
+    font-size: 0.9rem;
+  }
+}

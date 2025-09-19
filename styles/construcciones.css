@@ -1,0 +1,193 @@
+.navbar-cyo {
+  position: relative;
+  height: 75vh;  /* ocupa toda la pantalla */
+  background-image: url("/images/contruccionesyobras.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.navbar-cyo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4); /* overlay para legibilidad */
+  z-index: 1;
+}
+
+.overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 20px;
+}
+
+.titulo-cyo h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.texto-cyo p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+/* =========================
+   SECCIÓN CONSTRUCCIÓN Y OBRAS
+========================= */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section--light {
+  background: #f5f7fa;
+}
+
+.section__title {
+  font-size: 2.5rem;
+  color: #00c3ff;
+  margin-bottom: 20px;
+}
+
+.section__intro {
+  max-width: 850px;
+  margin: 0 auto 50px auto;
+  font-size: 1.15rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* =========================
+   GRID ALTERNATIVO
+========================= */
+.cards-grid--alt {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 30px 25px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, #00c3ff, #0086ff);
+}
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 10px 24px rgba(0, 195, 255, 0.3);
+}
+
+.card__icon {
+  font-size: 2.8rem;
+  color: #00c3ff;
+  margin-bottom: 15px;
+}
+
+.card__title {
+  font-size: 1.4rem;
+  color: #00c3ff;
+  margin-bottom: 12px;
+}
+
+.card__text {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .section__title {
+    font-size: 2rem;
+  }
+  .section__intro {
+    font-size: 1rem;
+  }
+  .card {
+    padding: 20px;
+  }
+  .card__icon {
+    font-size: 2.4rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(6, 95, 70, 0.95); /* verde sólido para móvil */
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li a {
+    width: 100%;
+    text-align: left;
+  }
+
+  .navbar-cyo {
+    height: 60vh; /* hero más pequeño en tablet */
+    padding: 0 15px;
+  }
+
+  .titulo-cyo h2 {
+    font-size: 1.8rem;
+  }
+
+  .texto-cyo p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-cyo h2 {
+    font-size: 1.4rem;
+  }
+
+  .texto-cyo p {
+    font-size: 0.9rem;
+  }
+}

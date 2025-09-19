@@ -1,0 +1,160 @@
+/* =========================
+   FOOTER PROFESIONAL CON FA - 3 SECCIONES
+========================= */
+.footer {
+  background: linear-gradient(135deg, #0b1c2c 0%, #13283f 100%);
+  color: #fff;
+  font-family: Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 3px;
+  background: #00aaff;
+  border-radius: 2px;
+  z-index: 1;
+}
+
+/* Logo centrado */
+.footer-logo {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-logo .logo {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #facc15;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-logo .logo:hover {
+  color: #00aaff;
+  transform: scale(1.1);
+}
+
+/* Secciones */
+.container-secciones {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Títulos */
+.container-secciones h3 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #00aaff;
+}
+
+/* Información contacto con iconos */
+.footer-contacto ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-contacto li {
+  margin-bottom: 12px;
+  color: #ddd;
+  font-size: 1rem;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+}
+
+.footer-contacto .icon {
+  margin-right: 10px;
+  font-size: 1.3rem;
+  color: #00c3ff;
+}
+
+/* Enlace correo */
+#correo {
+  color: #facc15;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#correo:hover {
+  color: #00aaff;
+}
+
+/* Redes sociales */
+.footer-redes .social-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer-redes .social-icons a {
+  font-size: 1.8rem;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer-redes .social-icons a:hover {
+  transform: scale(1.2);
+  color: #00aaff;
+  text-shadow: 0 0 6px #00aaff;
+}
+
+/* Nueva sección info extra */
+.footer-info-extra p,
+.footer-info-extra a {
+  font-size: 1rem;
+  color: #ddd;
+  display: block;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-info-extra a:hover {
+  color: #00aaff;
+}
+
+/* Copyright */
+.copyright {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  text-align: center;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #aaa;
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .container-secciones {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-contacto li,
+  .footer-info-extra p,
+  .footer-info-extra a {
+    justify-content: center;
+  }
+
+  .footer-redes {
+    justify-content: center;
+  }
+
+  .footer-logo .logo {
+    font-size: 2.2rem;
+  }
+}

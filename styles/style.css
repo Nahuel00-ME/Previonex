@@ -1,0 +1,308 @@
+@import 'capacitaciones.css';
+@import 'proteccion.css';
+@import 'construcciones.css';
+@import 'estudiosTecnicos.css';
+@import 'servicios.css';
+@import 'contacto.css';
+@import 'medioAmbiente.css';
+@import 'footer.css';
+
+/* ---------------- BODY ---------------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+
+/* ----------quienes somos ---------- */
+.quienes-somos {
+    background-color: #f9f9f9;
+    padding: 20px 100px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+.titulo-quienes {
+    color: #000000;   
+    font-weight: bold;
+    padding: 30px 70px;}
+
+.titulo-quienes h2{
+    margin: 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+.texto-quienes {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0 auto 20px auto;
+    line-height: 1.6;
+    padding: 30px 50px;
+    text-align: center
+}
+
+.texto-quienes p{
+    margin: 10px 0 20px 10px;
+    text-align: center;
+}
+
+
+
+
+/* Contenedor principal index */
+
+
+.servicio-destacado {
+  background-color: #ffffffea;
+    padding: 20px 60px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 1200px;
+    border-radius: 8px;
+    margin: 20px auto;
+}
+
+.servicio-contenido {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+  height: 400px;
+}
+
+.servicio-imagen {
+  flex: 1;
+  min-width: 300px;
+  height: 100%;    
+}
+
+.servicio-imagen img {
+  width: 109%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.servicio-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.servicio-texto h2 {
+  font-size: 2rem;
+  color: #000000; /* verde institucional */
+  margin-bottom: 70px;
+}
+
+.servicio-texto p span {
+  font-weight: bold;
+  color: #000000; /* verde institucional */
+
+}
+.servicio-texto p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .servicio-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .servicio-texto h2 {
+    font-size: 1.4rem;
+  }
+
+  .servicio-texto p {
+    font-size: 1rem;
+  }
+}
+
+
+/*<------- FOOTER ------->*/
+footer {
+    background-color: rgb(53, 41, 30);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================
+   HEADER + HERO
+========================= */
+.header-hero {
+  position: relative;
+  height: 76vh;
+  overflow: hidden;
+}
+
+.splide {
+  height: 100%;
+}
+
+.splide .splide__track,
+.splide .splide__list,
+.splide .splide__slide {
+  height: 100%;
+}
+
+.splide .splide__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- Botones del carrusel --- */
+.btn-slide {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 195, 255, 0.2); /* color translúcido */
+  color: #000000;
+  padding: 18px 35px;
+  border: 2px solid rgba(0, 195, 255, 0.8); /* contorno visible */
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  backdrop-filter: blur(4px); /* efecto cristalino */
+
+  font-size: 20px;
+}
+.btn-slide:hover {
+  background: rgba(0, 195, 255, 0.4); /* más marcado */
+  border-color: #00c3ff;               /* borde brillante */
+  transform: translateX(-50%) scale(1.05);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navigator {
+  position: absolute;   /* flota sobre el carrusel */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent; /* transparente total */
+  z-index: 10;
+  padding: 10px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Botón hamburguesa */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Links principales */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: color 0.3s;
+}
+.nav-links li a:hover {
+  color: #00c3ff;
+}
+
+/* =========================
+   SUBMENÚ (Servicios)
+========================= */
+.nav-links li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: transparent;
+  padding: 10px 0;
+  list-style: none;
+  min-width: 220px;
+}
+
+.nav-links li:hover ul {
+  display: block;
+}
+
+.nav-links li ul li a {
+  color: #fff;
+  padding: 10px 15px;
+  display: block;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.4); /* translúcido */
+  transition: background 0.3s;
+}
+.nav-links li ul li a:hover {
+  background: rgba(0, 195, 255, 0.3);
+}
+
+/* =========================
+   MEDIA QUERIES
+========================= */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none; /* oculto por defecto */
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.7); /* menú mobile translúcido */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+  }
+
+  .nav-links li {
+    text-align: right;
+  }
+
+  .nav-links li ul {
+    position: static;
+    background: transparent;
+  }
+
+  .nav-links li ul li a {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}

@@ -1,0 +1,172 @@
+.navbar {
+  position: relative;
+  height: 75vh;  /* ocupa toda la pantalla */
+  background-image: url("/images/medioAmbiente.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4); /* overlay para legibilidad */
+  z-index: 1;
+}
+
+.overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 20px;
+}
+
+.titulo-navbar h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.texto-top p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+/* =========================
+   SECCIÓN GESTIÓN AMBIENTAL
+========================= */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section--light {
+  background: #f5f7fa;
+}
+
+.section__title {
+  font-size: 2.5rem;
+  color: #00c3ff;
+  margin-bottom: 20px;
+}
+
+.section__intro {
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* =========================
+   CARDS GRID
+========================= */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 195, 255, 0.3);
+}
+
+.card__icon {
+  font-size: 2.8rem; /* más grande que el título */
+  color: #00c3ff;
+  margin-bottom: 15px;
+}
+
+.card__title {
+  font-size: 1.3rem;
+  color: #00c3ff;
+  margin-bottom: 10px;
+}
+
+.card__text {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .section__title {
+    font-size: 2rem;
+  }
+  .card {
+    padding: 20px;
+  }
+  .card__icon {
+    font-size: 2.4rem;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(6, 95, 70, 0.95); /* verde sólido para móvil */
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li a {
+    width: 100%;
+    text-align: left;
+  }
+
+  .navbar {
+    height: 60vh; /* hero más pequeño en tablet */
+    padding: 0 15px;
+  }
+
+  .titulo-navbar h2 {
+    font-size: 1.8rem;
+  }
+
+  .texto-navbar p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-navbar h2 {
+    font-size: 1.4rem;
+  }
+
+  .texto-navbar p {
+    font-size: 0.9rem;
+  }
+}
