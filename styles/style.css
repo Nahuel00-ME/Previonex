@@ -186,42 +186,6 @@ body {
     }
 }
 
-/* Móviles pequeños: hasta 480px */
-@media (max-width: 480px) {
-    .servicio-contenido {
-        flex-direction: column;
-        height: auto;
-        gap: 15px;
-    }
-
-    .servicio-imagen img {
-        width: 100%;
-        height: auto;
-    }
-
-    .servicio-texto h2 {
-        font-size: 1.3rem;
-        margin-bottom: 30px;
-    }
-
-    .servicio-texto p {
-        font-size: 0.95rem;
-    }
-
-    .titulo-quienes h2 {
-        font-size: 1.2rem;
-        padding: 20px;
-    }
-
-    .texto-quienes p {
-        font-size: 0.95rem;
-        padding: 15px 20px;
-    }
-
-    .quienes-somos, .servicio-destacado {
-        padding: 15px;
-    }
-}
 
 
 /*<------- FOOTER ------->*/
@@ -383,6 +347,7 @@ footer {
 /* =========================
    MEDIA QUERIES (Responsive)
 ========================= */
+
 @media (max-width: 768px) {
   .hamburger {
     display: block;

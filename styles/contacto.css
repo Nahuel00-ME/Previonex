@@ -1,3 +1,46 @@
+.navbarC{
+  position: relative;
+  height: 75vh;  /* ocupa toda la pantalla */
+  background-image: url("../images/contacto.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.navbarC::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4); /* overlay para legibilidad */
+  z-index: 1;
+}
+
+.overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 20px;
+}
+
+.titulo-navbarC h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.texto-top p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+
+
+
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
