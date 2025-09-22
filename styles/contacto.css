@@ -1,6 +1,6 @@
 .navbarContacto{
   position: relative;
-  height: 75vh;  /* ocupa toda la pantalla */
+  height: 70vh;  /* ocupa toda la pantalla */
   background-image: url("../images/contacto.jpg");
   background-size: cover;
   background-position: center;
