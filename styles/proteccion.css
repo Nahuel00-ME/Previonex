@@ -1,7 +1,7 @@
 .navbar-Proteccion {
   position: relative;
   height: 75vh;  /* ocupa toda la pantalla */
-  background-image: url("/images/bomberosPP");
+  background-image: url("../images/bomberosPP");
   background-size: cover;
   background-position: center;
   display: flex;

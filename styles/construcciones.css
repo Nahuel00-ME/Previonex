@@ -1,7 +1,7 @@
 .navbar-cyo {
   position: relative;
   height: 75vh;  /* ocupa toda la pantalla */
-  background-image: url("/images/contruccionesyobras.jpg");
+  background-image: url("../images/contruccionesyobras.jpg");
   background-size: cover;
   background-position: center;
   display: flex;

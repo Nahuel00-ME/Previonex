@@ -1,7 +1,7 @@
 .navbarC{
   position: relative;
   height: 75vh;  /* ocupa toda la pantalla */
-  background-image: url("/images/capacitacion.jpg");
+  background-image: url("../images/capacitacion.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
