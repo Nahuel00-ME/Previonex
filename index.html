@@ -1,190 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/97045d8aa4.js" crossorigin="anonymous" ></script>
-    <link rel="stylesheet" href="../Previonex/styles/style.css">
-  <link rel="stylesheet" href="../Previonex/splide-4.1.3/dist/css/splide.min.css">
-    <script src="../Previonex/splide-4.1.3/dist/js/splide.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/97045d8aa4.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./splide-4.1.3/dist/css/splide.min.css">
 
-    <title>Previonex</title>
+  <title>Previonex</title>
 </head>
 
 <body>
-    <header class="header-hero">
-      <div class="splide" aria-label="Hero Images">
+  <header class="header-hero">
+    <div class="splide" aria-label="Hero Images">
       <div class="splide__track">
         <ul class="splide__list">
           <li class="splide__slide">
-            <img src="../images/capacitacion.jpg" alt="Imagen 1" />
-            <a href="./capacitaciones.html" class="btn-slide">Ver Más</a>
-            
+            <img src="./images/capacitacion.jpg" alt="Imagen 1" />
+            <a href="./pages/capacitaciones.html" class="btn-slide">Ver Más</a>
           </li>
           <li class="splide__slide">
-            <img src="../images/contruccionesyobras.jpg" alt="Imagen 2" />
-            <a href="./construcciones.html" class="btn-slide">Ver Más</a>
+            <img src="./images/contruccionesyobras.jpg" alt="Imagen 2" />
+            <a href="./pages/construcciones.html" class="btn-slide">Ver Más</a>
           </li>
           <li class="splide__slide">
-            <img src="../images/medioAmbiente.jpg" alt="Imagen 3" />
-            <a href="./gestionAmbiental.html" class="btn-slide">Ver Más</a>
+            <img src="./images/medioAmbiente.jpg" alt="Imagen 3" />
+            <a href="./pages/gestionAmbiental.html" class="btn-slide">Ver Más</a>
           </li>
           <li class="splide__slide">
-            <img src="../images/estudios.png" alt="Imagen 4" />
-            <a href="./estudiosTecnicos.html" class="btn-slide">Ver Más</a>
+            <img src="./images/estudios.png" alt="Imagen 4" />
+            <a href="./pages/estudiosTecnicos.html" class="btn-slide">Ver Más</a>
           </li>
           <li class="splide__slide">
-            <img src="../images/servicios.jpg" alt="Imagen 5" />
-            <a href="./servicios.html" class="btn-slide">Ver Más</a>
+            <img src="./images/servicios.jpg" alt="Imagen 5" />
+            <a href="./pages/servicios.html" class="btn-slide">Ver Más</a>
           </li>
         </ul>
       </div>
     </div>
-  <nav class="navigator">
-    <div class="nav-container">
-      <div class="logo">Previonex</div>
 
-      <!-- Botón hamburguesa -->
-      <div class="hamburger">☰</div>
+    <!-- Navbar -->
+    <nav class="navigator">
+      <div class="nav-container">
+        <div class="logo">Previonex</div>
 
-      <ul class="nav-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li>
-          <a href="./Page/servicios.html">Servicios</a>
+        <!-- Botón hamburguesa -->
+        <div class="hamburger">☰</div>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li>
+            <a href="./pages/servicios.html">Servicios</a>
+            <ul>
+              <li><a href="./pages/servicios.html">Estudios y Evaluaciones</a></li>
+              <li><a href="./pages/construcciones.html">Construcciones y Obras</a></li>
+              <li><a href="./pages/capacitaciones.html">Capacitaciones</a></li>
+              <li><a href="./pages/proteccion.html">Protección</a></li>
+              <li><a href="./pages/gestionAmbiental.html">Gestión Ambiental</a></li>
+              <li><a href="./pages/estudiosTecnicos.html">Estudios Técnicos</a></li>
+            </ul>
+          </li>
+          <li><a href="./pages/contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="inicio-top">
+      <div class="overlay">
+        <div class="titulo-top">
+          <h2>Consultora Previonex</h2>
+          <p>Soluciones integrales en Higiene y Seguridad</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="servicio-destacado">
+      <div class="servicio-contenido">
+        <!-- Texto -->
+        <div class="servicio-texto">
+          <h2>Soluciones en seguridad laboral y medio ambiente</h2>
+          <p>
+            Ofrecemos soluciones completas en <span> higiene y seguridad laboral, control de incendios,
+              gestión ambiental, construcción y capacitaciones</span>, acompañando a empresas y obras en el
+            cumplimiento de la normativa y en la mejora continua de sus condiciones de trabajo.
+          </p>
+        </div>
+        <!-- Imagen -->
+        <div class="servicio-imagen">
+          <img src="./images/seguridadEhiguiene.jpg" alt="Seguridad e Higiene">
+        </div>
+      </div>
+    </section>
+
+    <div class="quienes-somos">
+      <div class="titulo-quienes">
+        <h2>Somos una empresa dedicada a brindar soluciones integrales en materia de prevención de riesgos del
+          trabajo y protección del medio ambiente.</h2>
+      </div>
+      <div class="texto-quienes">
+        <p>
+          Nos basamos en el cumplimiento de la legislación vigente, priorizando brindar el mejor soporte y
+          asistencia técnica a nuestros clientes. Nuestra misión consiste en diagnosticar de manera precisa la
+          necesidad de cada compañía. Evaluando pormenorizadamente los riesgos en los puestos, áreas y procesos
+          productivos de trabajo, priorizando aumentar la calidad de vida de cada trabajador o colaborador,
+          disminuyendo así la posibilidad de ocurrencia de contingencias en las empresas.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container-footer">
+
+      <!-- Logo centrado arriba -->
+      <div class="footer-logo">
+        <a href="index.html" class="logo">Previonex</a>
+      </div>
+
+      <!-- Secciones -->
+      <div class="container-secciones">
+        <!-- Información de contacto -->
+        <div class="footer-contacto">
+          <h3>Contáctanos</h3>
           <ul>
-            <li><a href="./Page/servicios.html">Estudios y Evaluaciones</a></li>
-            <li><a href="./Page/construcciones.html">Construcciones y Obras</a></li>
-            <li><a href="./Page/capacitaciones.html">Capacitaciones</a></li>
-            <li><a href="./Page/proteccion.html">Protección</a></li>
-            <li><a href="./Page/gestionAmbiental.html">Gestión Ambiental</a></li>
-            <li><a href="./Page/estudiosTecnicos.html">Estudios Técnicos</a></li>
+            <li><i class="fas fa-map-marker-alt icon"></i> Maciel 375, Merlo, Buenos Aires</li>
+            <li><i class="fas fa-phone icon"></i> +54 9 1122376586</li>
+            <li><i class="fas fa-envelope icon"></i> <a href="mailto:Previonex@gmail.com" id="correo">Previonex@gmail.com</a></li>
           </ul>
-        </li>
-        <li><a href="./Page/contacto.html">Contacto</a></li>
-      </ul>
-    </div>
-  </nav>
-</header>
+        </div>
 
-    <main>
-        
-  <div class="inicio-top">
-  <div class="overlay">
-  <div class="titulo-top">
-      <h2>Consultora Previonex</h2>
-      <p>Soluciones integrales en Higiene y Seguridad</p>
-    </div>
-    
-  </div>
-</div>
+        <!-- Redes sociales -->
+        <div class="footer-redes">
+          <h3>Seguinos</h3>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/shgconsultora" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/shgconsultora/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/shg-consultora-589b69228/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
 
-
-  <section class="servicio-destacado">
-  <div class="servicio-contenido">
-    
-   
-    <!-- Texto -->
-    <div class="servicio-texto">
-      <h2>
-        Soluciones en seguridad laboral y medio ambiente
-      </h2>
-      <p>
-        Ofrecemos soluciones completas en <span> higiene y seguridad laboral, control de incendios,
-         gestión ambiental, construcción y capacitaciones</span>, acompañando a empresas 
-        y obras en el cumplimiento de la normativa y en la mejora continua de sus condiciones de trabajo.
-      </p>
-    </div>
-    <!-- Imagen -->
-    <div class="servicio-imagen">
-        <img src="../images/seguridadEhiguiene.jpg" alt="Seguridad e Higiene">
-    </div>
-    
-    
-</div>
-</section>
-<div class="quienes-somos">
-    <div class="titulo-quienes">
-    <h2>Somos una empresa dedicada a brindar soluciones integrales en materia de prevención de riesgos del trabajo
-     y protección del medio ambiente.</h2>
-     </div>
-    <div class="texto-quienes">
-     <p>
-    Nos basamos en el cumplimiento de la legislación vigente, priorizando brindar el mejor soporte y asistencia técnica a nuestros clientes.
-    Nuestra misión consiste en diagnosticar de manera precisa la necesidad de cada compañía. Evaluando pormenorizadamente los riesgos en los puestos,
-    áreas y procesos productivos de trabajo, priorizando aumentar la calidad de vida de cada trabajador o colaborador,
-    disminuyendo así la posibilidad de ocurrencia de contingencias en las empresas.
-     </p>
-    </div>
-</div>
-
-</main>
-<footer class="footer">
-  <div class="container-footer">
-
-    <!-- Logo centrado arriba -->
-    <div class="footer-logo">
-      <a href="index.html" class="logo">Previonex</a>
-    </div>
-
-    <!-- Secciones -->
-    <div class="container-secciones">
-
-      <!-- Información de contacto -->
-      <div class="footer-contacto">
-        <h3>Contáctanos</h3>
-        <ul>
-          <li><i class="fas fa-map-marker-alt icon"></i> Maciel 375, Merlo, Buenos Aires</li>
-          <li><i class="fas fa-phone icon"></i> +54 9 1122376586</li>
-          <li><i class="fas fa-envelope icon"></i> <a href="mailto:Previonex@gmail.com" id="correo">Previonex@gmail.com</a></li>
-        </ul>
-      </div>
-
-      <!-- Redes sociales -->
-      <div class="footer-redes">
-        <h3>Seguinos</h3>
-        <div class="social-icons">
-          <a href="https://www.facebook.com/shgconsultora" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/shgconsultora/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/shg-consultora-589b69228/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <!-- Info extra -->
+        <div class="footer-info-extra">
+          <h3>¿Querés más información?</h3>
+          <p class="contact-info">info@Previonex.com.ar</p>
+          <a href="mailto:info@Previonex.com.ar">
+            <i class="fa-regular fa-envelope" id="correo"> Email</i>
+          </a>
         </div>
       </div>
 
-      <!-- Nueva sección -->
-      <div class="footer-info-extra">
-        <h3>¿Querés más información?</h3>
-        <p class="contact-info">info@Previonex.com.ar</p>
-        <a href="mailto:info@Previonex.com.ar">
-          <i class="fa-regular fa-envelope" id="correo"> Email</i>
-        </a>
+      <!-- Copyright -->
+      <div class="copyright">
+        &copy; 2025 Previonex. Todos los derechos reservados.
       </div>
-
     </div>
+  </footer>
 
-    <!-- Copyright -->
-    <div class="copyright">
-      &copy; 2025 Previonex. Todos los derechos reservados.
-    </div>
-
-  </div>
-</footer>
-
-
-
-
-<script >
-
-var splide = new Splide( '.splide', {
-  type   : 'loop',
-  autoplay: true,
-  interval: '2000',
-  drag: true,
-  arrows: true,
-  speed: 800,
-  easing: 'ease',
-} );
-splide.mount();
-</script>
+  <!-- Splide JS -->
+  <script src="./splide-4.1.3/dist/js/splide.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script>
+    var splide = new Splide('.splide', {
+      type: 'loop',
+      autoplay: true,
+      interval: 2000,
+      drag: true,
+      arrows: true,
+      speed: 800,
+      easing: 'ease',
+    });
+    splide.mount();
+  </script>
 </body>
 
 </html>
