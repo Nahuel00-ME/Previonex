@@ -189,9 +189,6 @@ footer {
   transform: translateX(-50%) scale(1.05);
 }
 
-/* =========================
-   NAVBAR
-========================= */
 .navigator {
   position: absolute;   /* flota sobre el carrusel */
   top: 0;
@@ -221,6 +218,12 @@ footer {
   font-size: 2rem;
   color: #fff;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Animación de X */
+.hamburger.open {
+  transform: rotate(90deg);
 }
 
 /* Links principales */
@@ -253,14 +256,20 @@ footer {
   position: absolute;
   top: 100%;
   left: 0;
-  background: transparent;
+  background: rgba(0,0,0,0.6);
   padding: 10px 0;
   list-style: none;
   min-width: 220px;
+  border-radius: 6px;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .nav-links li:hover ul {
   display: block;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .nav-links li ul li a {
@@ -268,15 +277,15 @@ footer {
   padding: 10px 15px;
   display: block;
   white-space: nowrap;
-  background: rgba(0, 0, 0, 0.4); /* translúcido */
-  transition: background 0.3s;
+  transition: background 0.3s, color 0.3s;
 }
+
 .nav-links li ul li a:hover {
   background: rgba(0, 195, 255, 0.3);
 }
 
 /* =========================
-   MEDIA QUERIES
+   MEDIA QUERIES (Responsive)
 ========================= */
 @media (max-width: 768px) {
   .hamburger {
@@ -284,25 +293,43 @@ footer {
   }
 
   .nav-links {
-    display: none; /* oculto por defecto */
+    position: fixed;
+    top: 70px; /* Ajusta según altura header */
+    left: -100%;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.7); /* menú mobile translúcido */
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 200px;
+    width: 100%;
+    background-color: rgba(11,28,44,0.95);
+    gap: 0;
+    padding: 20px 0;
+    transition: left 0.3s ease;
+  }
+
+  .nav-links.active {
+    left: 0;
   }
 
   .nav-links li {
-    text-align: right;
+    text-align: center;
+    width: 100%;
+    padding: 15px 0;
   }
 
+  /* Submenú en mobile */
   .nav-links li ul {
     position: static;
-    background: transparent;
+    opacity: 1;
+    pointer-events: auto;
+    background: none;
+    padding: 0;
+    border-radius: 0;
   }
 
   .nav-links li ul li a {
-    background: rgba(0, 0, 0, 0.5);
+    padding-left: 30px;
+    background: none;
+  }
+
+  .nav-links li:hover ul {
+    display: block;
   }
 }
