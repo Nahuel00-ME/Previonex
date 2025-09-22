@@ -16,7 +16,7 @@ body {
 
 
 
-/* ----------quienes somos ---------- */
+/* ---------- quienes somos ---------- */
 .quienes-somos {
     background-color: #f9f9f9;
     padding: 20px 100px;
@@ -28,7 +28,8 @@ body {
 .titulo-quienes {
     color: #000000;   
     font-weight: bold;
-    padding: 30px 70px;}
+    padding: 30px 70px;
+}
 
 .titulo-quienes h2{
     margin: 0;
@@ -36,14 +37,13 @@ body {
     font-size: 1.5rem;
 }
 
-
 .texto-quienes {
     font-size: 1.1rem;
     color: #333;
     margin: 0 auto 20px auto;
     line-height: 1.6;
     padding: 30px 50px;
-    text-align: center
+    text-align: center;
 }
 
 .texto-quienes p{
@@ -51,14 +51,9 @@ body {
     text-align: center;
 }
 
-
-
-
-/* Contenedor principal index */
-
-
+/* ---------- servicio destacado ---------- */
 .servicio-destacado {
-  background-color: #ffffffea;
+    background-color: #ffffffea;
     padding: 20px 60px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     max-width: 1200px;
@@ -67,64 +62,165 @@ body {
 }
 
 .servicio-contenido {
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  gap: 8px;
-  flex-wrap: wrap;
-  height: 400px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+    height: 400px;
 }
 
 .servicio-imagen {
-  flex: 1;
-  min-width: 300px;
-  height: 100%;    
+    flex: 1;
+    min-width: 300px;
+    height: 100%;    
 }
 
 .servicio-imagen img {
-  width: 109%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 4px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 109%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .servicio-texto {
-  flex: 1;
-  min-width: 300px;
+    flex: 1;
+    min-width: 300px;
 }
 
 .servicio-texto h2 {
-  font-size: 2rem;
-  color: #000000; /* verde institucional */
-  margin-bottom: 70px;
+    font-size: 2rem;
+    color: #000000; /* verde institucional */
+    margin-bottom: 70px;
 }
 
 .servicio-texto p span {
-  font-weight: bold;
-  color: #000000; /* verde institucional */
-
+    font-weight: bold;
+    color: #000000; /* verde institucional */
 }
+
 .servicio-texto p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .servicio-contenido {
-    flex-direction: column;
-    text-align: center;
-  }
+/* =========================
+   Media Queries Detallados
+========================= */
 
-  .servicio-texto h2 {
-    font-size: 1.4rem;
-  }
+/* Pantallas grandes: más de 1200px */
+@media (min-width: 1200px) {
+    .servicio-contenido {
+        flex-direction: row;
+        gap: 20px;
+        height: 450px;
+    }
 
-  .servicio-texto p {
-    font-size: 1rem;
-  }
+    .servicio-texto h2 {
+        font-size: 2.2rem;
+        margin-bottom: 80px;
+    }
+
+    .titulo-quienes h2 {
+        font-size: 1.8rem;
+        padding: 40px 80px;
+    }
+
+    .texto-quienes p {
+        font-size: 1.2rem;
+        padding: 40px 80px;
+    }
+}
+
+/* Pantallas medianas: entre 769px y 1200px */
+@media (max-width: 1200px) and (min-width: 769px) {
+    .servicio-contenido {
+        flex-direction: row;
+        gap: 15px;
+        height: 420px;
+    }
+
+    .servicio-texto h2 {
+        font-size: 1.8rem;
+        margin-bottom: 60px;
+    }
+
+    .titulo-quienes h2 {
+        font-size: 1.6rem;
+        padding: 35px 70px;
+    }
+
+    .texto-quienes p {
+        font-size: 1.1rem;
+        padding: 35px 60px;
+    }
+}
+
+/* Tablets y móviles grandes: entre 481px y 768px */
+@media (max-width: 768px) and (min-width: 481px) {
+    .servicio-contenido {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+    }
+
+    .servicio-texto h2 {
+        font-size: 1.5rem;
+        margin-bottom: 40px;
+    }
+
+    .servicio-texto p {
+        font-size: 1rem;
+    }
+
+    .titulo-quienes h2 {
+        font-size: 1.4rem;
+        padding: 25px 40px;
+    }
+
+    .texto-quienes p {
+        font-size: 1rem;
+        padding: 25px 30px;
+    }
+}
+
+/* Móviles pequeños: hasta 480px */
+@media (max-width: 480px) {
+    .servicio-contenido {
+        flex-direction: column;
+        height: auto;
+        gap: 15px;
+    }
+
+    .servicio-imagen img {
+        width: 100%;
+        height: auto;
+    }
+
+    .servicio-texto h2 {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+    }
+
+    .servicio-texto p {
+        font-size: 0.95rem;
+    }
+
+    .titulo-quienes h2 {
+        font-size: 1.2rem;
+        padding: 20px;
+    }
+
+    .texto-quienes p {
+        font-size: 0.95rem;
+        padding: 15px 20px;
+    }
+
+    .quienes-somos, .servicio-destacado {
+        padding: 15px;
+    }
 }
 
 
