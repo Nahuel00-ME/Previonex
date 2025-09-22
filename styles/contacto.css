@@ -1,4 +1,4 @@
-.navbarC{
+.navbarContacto{
   position: relative;
   height: 75vh;  /* ocupa toda la pantalla */
   background-image: url("../images/contacto.jpg");
@@ -13,7 +13,7 @@
   padding: 0 20px;
 }
 
-.navbarC::before {
+.navbarContacto::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -28,12 +28,12 @@
   padding: 20px;
 }
 
-.titulo-navbarC h2 {
+.titulo-navbarContacto h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-.texto-top p {
+.texto-navbarContacto p {
   font-size: 1.2rem;
   line-height: 1.6;
 }
@@ -124,5 +124,7 @@
   .contact-form {
     margin: 0 20px;
   }
+
+
 }
 
