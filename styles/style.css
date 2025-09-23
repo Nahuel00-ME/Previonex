@@ -267,32 +267,8 @@ footer {
 /* =========================
    MEDIA QUERIES (Responsive)
 ========================= */
-/* Pantallas grandes: más de 1200px */
-@media (min-width: 1200px) {
-    .servicio-contenido {
-        flex-direction: row;
-        gap: 20px;
-        height: 450px;
-    }
 
-    .servicio-texto h2 {
-        font-size: 2.2rem;
-        margin-bottom: 80px;
-    }
-
-    .titulo-quienes h2 {
-        font-size: 1.8rem;
-        padding: 40px 80px;
-    }
-
-    .texto-quienes p {
-        font-size: 1.2rem;
-        padding: 40px 80px;
-    }
-}
-
-/* Pantallas medianas: entre 769px y 1200px */
-@media (max-width: 1200px) and (min-width: 769px) {
+@media (max-width: 1200px) {
     .servicio-contenido {
         flex-direction: row;
         gap: 15px;
@@ -315,7 +291,7 @@ footer {
     }
 }
 
-/* Tablets y móviles grandes: entre 481px y 768px */
+
 @media (max-width: 768px) {
     .servicio-contenido {
         flex-direction: column;
@@ -364,22 +340,22 @@ footer {
     display: flex;
   }
 
+  /* Ocultamos el submenú por defecto */
   .nav-links li ul {
-    position: static;
-    background: transparent;
-    padding: 0;
+    display: none;
+    flex-direction: column;
+    background: rgba(0,0,0,0.8);
+    padding-left: 10px;
+    border-left: 2px solid #00c3ff;
   }
 
-  .nav-links li ul li a {
-    background: none;
-    padding-left: 0;
-  }
-
-  .nav-links li:hover ul {
-    display: none; /* en móvil no se abre al hover */
-  }
-
+  /* Cuando se abre con la clase .open en JS */
   .nav-links li.open ul {
-    display: block; /* en móvil se abre al click */
+    display: flex;
+  }
+
+  /* Quitamos el hover para móviles */
+  .nav-links li:hover ul {
+    display: none;
   }
 }
