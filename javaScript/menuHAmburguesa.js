@@ -1,21 +1,20 @@
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-const menuItems = document.querySelectorAll('.nav-links > li > a');
+// Elementos principales
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
 
-if (hamburger && navLinks) {
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    hamburger.classList.toggle('open');
-  });
-}
+// Toggle menú hamburguesa
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  hamburger.classList.toggle("open");
+});
 
-// Para abrir submenús en móvil
-menuItems.forEach(item => {
-  item.addEventListener('click', (e) => {
-    const parentLi = item.parentElement;
-    if (parentLi.querySelector('ul')) {
-      e.preventDefault(); // Evita que se vaya a la página
-      parentLi.classList.toggle('open');
-    }
-  });
+// Submenú "Servicios"
+const serviciosLink = document.querySelector(".nav-links li:nth-child(2) > a");
+const serviciosSubmenu = document.querySelector(".nav-links li:nth-child(2) ul");
+
+serviciosLink.addEventListener("click", (e) => {
+  if (window.innerWidth <= 768) {
+    e.preventDefault(); // evita navegación
+    serviciosSubmenu.classList.toggle("open");
+  }
 });
