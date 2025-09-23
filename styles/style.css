@@ -347,43 +347,39 @@ footer {
   }
 
   .nav-links {
-    position: fixed;
-    top: 70px; /* Ajusta según altura header */
-    left: -100%;
+    display: none;
     flex-direction: column;
-    width: 100%;
-    background-color: rgba(11,28,44,0.95);
-    gap: 0;
-    padding: 20px 0;
-    transition: left 0.3s ease;
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    text-align: right;
   }
 
   .nav-links.active {
-    left: 0;
+    display: flex;
   }
 
-  .nav-links li {
-    text-align: center;
-    width: 100%;
-    padding: 15px 0;
-  }
-
-  /* Submenú en mobile */
   .nav-links li ul {
     position: static;
-    opacity: 1;
-    pointer-events: auto;
-    background: none;
+    background: transparent;
     padding: 0;
-    border-radius: 0;
   }
 
   .nav-links li ul li a {
-    padding-left: 30px;
     background: none;
+    padding-left: 0;
   }
 
   .nav-links li:hover ul {
-    display: block;
+    display: none; /* en móvil no se abre al hover */
+  }
+
+  .nav-links li.open ul {
+    display: block; /* en móvil se abre al click */
   }
 }
