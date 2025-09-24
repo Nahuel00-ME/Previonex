@@ -319,12 +319,10 @@ footer {
     }
 
 
-  /* Mostrar botón hamburguesa */
   .hamburger {
     display: block;
   }
 
-  /* Menú principal oculto por defecto */
   .nav-links {
     display: none;
     flex-direction: column;
@@ -337,38 +335,28 @@ footer {
     border-radius: 8px;
     width: 250px;
     text-align: right;
-    z-index: 100;
   }
 
-  /* Cuando el menú está activo */
   .nav-links.active {
     display: flex;
   }
 
-  /* Submenú oculto por defecto */
+  /* Submenú en móvil */
   .nav-links li ul {
+    position: static;
     display: none;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.85);
     margin-top: 5px;
     border-radius: 5px;
-    padding-left: 0;
+    padding: 10px;
   }
 
-  /* Submenú abierto */
-  .nav-links li ul.open {
+  .nav-links li.open > ul {
     display: flex;
   }
 
-  /* Links principales en móvil */
-  .nav-links li a {
-    padding: 10px 0;
-    color: #fff;
-    font-weight: bold;
-    display: block;
-  }
-
-  /* Evita que hover interfiera en móvil */
+  /* Desactiva hover en móvil */
   .nav-links li:hover ul {
     display: none;
   }
