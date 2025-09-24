@@ -10,10 +10,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Toggle submenú en "Servicios"
-  serviciosItem.addEventListener("click", (e) => {
-    if (window.innerWidth <= 768) {
-      e.preventDefault(); // Evita que navegue directo
-      serviciosLi.classList.toggle("open");
+  link.addEventListener("click", (e) => {
+  if (window.innerWidth <= 768) {
+    // solo móviles → abrir/cerrar submenú
+    // Aquí puedes agregar la lógica para abrir/cerrar el submenú en móviles
+  } else {
+    // desktop → evitar que href="#" haga scroll arriba
+    const href = link.getAttribute("href");
+    if (!href || href === "#") {
+      e.preventDefault();
     }
-  });
-});
+  }
+})
+;});
