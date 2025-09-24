@@ -308,15 +308,17 @@ footer {
         font-size: 1rem;
     }
 
-    .titulo-quienes h2 {
-        font-size: 1.4rem;
-        padding: 25px 40px;
-    }
+     .titulo-quienes h2 {
+    font-size: 1.2rem;
+    padding: 20px 30px;
+    text-align: center;
+  }
 
-    .texto-quienes p {
-        font-size: 1rem;
-        padding: 25px 30px;
-    }
+  .texto-quienes p {
+    font-size: 1rem;
+    padding: 20px 25px;
+    text-align: justify;
+  }
 
 
   .hamburger {
@@ -359,5 +361,19 @@ footer {
   /* Desactiva hover en móvil */
   .nav-links li:hover ul {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-quienes h2 {
+    font-size: 1.1rem;
+    padding: 15px 20px;
+    text-align: center;
+  }
+
+  .texto-quienes p {
+    font-size: 0.95rem;
+    padding: 15px 20px;
+    text-align: justify;
   }
 }
