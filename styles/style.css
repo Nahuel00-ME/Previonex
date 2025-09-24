@@ -213,18 +213,19 @@ HEADER + HERO
   padding: 8px 12px;
   transition: color 0.3s;
 }
-
 .nav-links li a:hover {
   color: #00c3ff;
 }
 
-/* Submenú */
+/* =========================
+SUBMENÚ (Servicios)
+========================= */
 .nav-links li ul {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(0,0,0,0.6);
   padding: 10px 0;
   list-style: none;
   min-width: 220px;
@@ -232,11 +233,16 @@ HEADER + HERO
   transition: opacity 0.3s ease;
   opacity: 0;
   pointer-events: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links li:hover ul {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .nav-links li ul li a {
-  color: #333;
+  color: #fff;
   padding: 10px 15px;
   display: block;
   white-space: nowrap;
@@ -244,23 +250,9 @@ HEADER + HERO
 }
 
 .nav-links li ul li a:hover {
-  background: rgba(0, 195, 255, 0.1);
-  color: #00c3ff;
+  background: rgba(0, 195, 255, 0.3);
 }
 
-/* Clases para estados */
-.nav-links.active {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.nav-links li.open ul {
-  display: block;
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
-}
 /*<------- FOOTER ------->*/
 footer {
     background-color: rgb(53, 41, 30);
@@ -297,41 +289,46 @@ footer {
         font-size: 1.1rem;
         padding: 35px 60px;
     }
-  .hamburger {
+      .hamburger {
     display: block;
   }
-  
+
   .nav-links {
-    display: block;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.95);
     position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: white;
-    padding: 1rem;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transform: translateY(-10px);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
+    top: 60px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    text-align: right;
   }
-  
-  .nav-links li {
-    margin: 0.5rem 0;
+
+  .nav-links.active {
+    display: flex;
   }
-  
+
+  /* Submenú en móvil */
   .nav-links li ul {
     position: static;
-    background: none;
-    box-shadow: none;
-    padding: 0;
-    opacity: 1;
-    pointer-events: auto;
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.85);
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 10px;
   }
-  
-  .nav-links li ul li {
-    border-bottom: 1px solid #eee;
+
+  .nav-links li.open > ul {
+    display: flex;
+  }
+
+  /* Desactiva hover en móvil */
+  .nav-links li:hover ul {
+    display: none;
   }
 }
 
@@ -374,42 +371,43 @@ footer {
   }
 
 
-.hamburger {
+  .hamburger {
     display: block;
   }
-  
+
   .nav-links {
-    display: block;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.95);
     position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: white;
-    padding: 1rem;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transform: translateY(-10px);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
+    top: 60px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    text-align: right;
   }
-  
-  .nav-links li {
-    margin: 0.5rem 0;
+
+  .nav-links.active {
+    display: flex;
   }
-  
+
+  /* Submenú en móvil */
   .nav-links li ul {
     position: static;
-    background: none;
-    box-shadow: none;
-    padding: 0;
-    opacity: 1;
-    pointer-events: auto;
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.85);
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 10px;
   }
-  
-  .nav-links li ul li {
-    border-bottom: 1px solid #eee;
+
+  .nav-links li.open > ul {
+    display: flex;
   }
+
   /* Desactiva hover en móvil */
   .nav-links li:hover ul {
     display: none;
@@ -417,13 +415,7 @@ footer {
 }
 
 @media (max-width: 480px) {
- .quienes-somos {
-    background-color: #f9f9f9;
-    padding: 10px 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    border-radius: 8px;
-}
+ 
  
  
   .titulo-quienes h2 {
@@ -441,39 +433,40 @@ footer {
   .hamburger {
     display: block;
   }
-  
+
   .nav-links {
-    display: block;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.95);
     position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: white;
-    padding: 1rem;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transform: translateY(-10px);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
+    top: 60px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    text-align: right;
   }
-  
-  .nav-links li {
-    margin: 0.5rem 0;
+
+  .nav-links.active {
+    display: flex;
   }
-  
+
+  /* Submenú en móvil */
   .nav-links li ul {
     position: static;
-    background: none;
-    box-shadow: none;
-    padding: 0;
-    opacity: 1;
-    pointer-events: auto;
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.85);
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 10px;
   }
-  
-  .nav-links li ul li {
-    border-bottom: 1px solid #eee;
+
+  .nav-links li.open > ul {
+    display: flex;
   }
+
   /* Desactiva hover en móvil */
   .nav-links li:hover ul {
     display: none;
