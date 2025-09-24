@@ -181,21 +181,13 @@ HEADER + HERO
   color: #fff;
 }
 
-/* Botón hamburguesa */
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  color: #fff;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
 /* Animación de X */
 .hamburger.open {
   transform: rotate(90deg);
 }
-
-/* Links principales */
+/* =========================
+   LINKS PRINCIPALES
+========================= */
 .nav-links {
   list-style: none;
   display: flex;
@@ -212,47 +204,56 @@ HEADER + HERO
   font-weight: bold;
   padding: 8px 12px;
   transition: color 0.3s;
+  display: block;
 }
 .nav-links li a:hover {
   color: #00c3ff;
 }
 
 /* =========================
-SUBMENÚ (Servicios)
+   FLECHITA ▼ INDICADOR
+========================= */
+.nav-links li .arrow {
+  margin-left: 5px;
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+.nav-links li.open > a .arrow {
+  transform: rotate(180deg); /* gira flechita */
+}
+
+/* =========================
+   SUBMENÚ (Desktop)
 ========================= */
 .nav-links li ul {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background: rgba(0,0,0,0.6);
-  padding: 10px 0;
   list-style: none;
-  min-width: 220px;
-  border-radius: 6px;
-  transition: opacity 0.3s ease;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.nav-links li:hover ul {
-  display: block;
-  opacity: 1;
-  pointer-events: auto;
+  min-width: 200px;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 5px;
 }
 
 .nav-links li ul li a {
-  color: #fff;
   padding: 10px 15px;
-  display: block;
   white-space: nowrap;
-  transition: background 0.3s, color 0.3s;
 }
 
-.nav-links li ul li a:hover {
-  background: rgba(0, 195, 255, 0.3);
+.nav-links li:hover > ul {
+  display: block;
 }
 
+/* =========================
+   HAMBURGUESA
+========================= */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
 /*<------- FOOTER ------->*/
 footer {
     background-color: rgb(53, 41, 30);
@@ -371,7 +372,7 @@ footer {
   }
 
 
-  .hamburger {
+    .hamburger {
     display: block;
   }
 
@@ -429,7 +430,7 @@ footer {
     text-align: justify;
   }
 
-  .hamburger {
+    .hamburger {
     display: block;
   }
 
