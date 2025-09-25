@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     serviciosLink.addEventListener("click", (e) => {
         if (window.innerWidth <= 768) {
             e.preventDefault(); // evita salto
+            navLinks.classList.add("active"); // Activa el menú principal
             serviciosLi.classList.toggle("open");
         }
     });
@@ -26,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 👉 Nueva función: Cierra menú al hacer clic fuera
+    // 👉 Cierra menú al hacer clic fuera
     document.addEventListener("click", (e) => {
         const target = e.target;
         
@@ -39,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // 👉 Mejora: Manejo de redimensionamiento de ventana
+    // 👉 Manejo de redimensionamiento de ventana
     window.addEventListener('resize', () => {
         if (window.innerWidth > 768) {
             navLinks.classList.remove("active");
