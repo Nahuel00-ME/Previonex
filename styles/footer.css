@@ -157,6 +157,9 @@
   .footer-logo .logo {
     font-size: 2.2rem;
   }
+   .footer-redes .social-icons a {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
