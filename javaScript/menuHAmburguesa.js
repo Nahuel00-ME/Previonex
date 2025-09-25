@@ -1,25 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".hamburger");
   const navLinks = document.querySelector(".nav-links");
-  const serviciosItem = document.querySelector(".nav-links li:nth-child(2) > a");
-  const serviciosLi = serviciosItem.parentElement;
+  const serviciosLink = document.querySelector(".submenu-toggle");
+  const serviciosLi = serviciosLink.parentElement;
 
-  // Toggle menú hamburguesa
+  // 👉 Toggle menú hamburguesa
   hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("active");
   });
 
-  // Toggle submenú en "Servicios"
-  link.addEventListener("click", (e) => {
-  if (window.innerWidth <= 768) {
-    // solo móviles → abrir/cerrar submenú
-    // Aquí puedes agregar la lógica para abrir/cerrar el submenú en móviles
-  } else {
-    // desktop → evitar que href="#" haga scroll arriba
-    const href = link.getAttribute("href");
-    if (!href || href === "#") {
-      e.preventDefault();
+  // 👉 Toggle submenú en móvil
+  serviciosLink.addEventListener("click", (e) => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault(); // evita salto
+      serviciosLi.classList.toggle("open");
     }
-  }
-})
-;});
+  });
+
+  // 👉 Cierra menú al clickear un link normal en móvil
+  navLinks.querySelectorAll("a:not(.submenu-toggle)").forEach(link => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth <= 768) {
+        navLinks.classList.remove("active");
+      }
+    });
+  });
+});
+

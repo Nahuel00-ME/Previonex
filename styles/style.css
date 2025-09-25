@@ -372,7 +372,7 @@ footer {
   }
 
 
-    .hamburger {
+  .hamburger {
     display: block;
   }
 
@@ -380,7 +380,9 @@ footer {
     display: none;
     flex-direction: column;
     gap: 15px;
-    background: rgba(0, 0, 0, 0.95);
+    /* transparente para ver fondo */
+    background: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(8px); /* efecto vidrio */
     position: absolute;
     top: 60px;
     right: 20px;
@@ -399,7 +401,7 @@ footer {
     position: static;
     display: none;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.65);
     margin-top: 5px;
     border-radius: 5px;
     padding: 10px;
@@ -430,7 +432,7 @@ footer {
     text-align: justify;
   }
 
-    .hamburger {
+  .hamburger {
     display: block;
   }
 
@@ -438,7 +440,9 @@ footer {
     display: none;
     flex-direction: column;
     gap: 15px;
-    background: rgba(0, 0, 0, 0.95);
+    /* transparente para ver fondo */
+    background: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(8px); /* efecto vidrio */
     position: absolute;
     top: 60px;
     right: 20px;
@@ -457,7 +461,7 @@ footer {
     position: static;
     display: none;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.65);
     margin-top: 5px;
     border-radius: 5px;
     padding: 10px;
