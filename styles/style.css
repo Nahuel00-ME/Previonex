@@ -141,19 +141,20 @@ HEADER + HERO
   bottom: 15%;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0, 195, 255, 0.2); /* color translúcido */
   color: #000000;
   padding: 18px 35px;
   text-decoration: none;
   font-weight: bold;
   backdrop-filter: blur(4px); /* efecto cristalino */
-  font-size: 30px;
+
+  font-size: 28px;
 }
 .btn-slide:hover {
   background: rgba(0, 195, 255, 0.4); /* más marcado */
   border-color: #00c3ff;               /* borde brillante */
   transform: translateX(-50%) scale(1.05);
 }
+
 
 .navigator {
   position: absolute;   /* flota sobre el carrusel */
@@ -173,10 +174,17 @@ HEADER + HERO
 }
 
 .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.logo-img{
+ display: block;
   height: 55px;   /* ajusta tamaño del logo */
   width: auto;
-  display: block;
-}
+  
+} 
 
 /* Animación de X */
 .hamburger.open {
@@ -429,18 +437,15 @@ footer {
     text-align: justify;
   }
 
-  .hamburger {
+    .hamburger {
     display: block;
   }
 
-  
   .nav-links {
     display: none;
     flex-direction: column;
     gap: 15px;
-    /* transparente para ver fondo */
-    background: rgba(0, 0, 0, 0.5); 
-    backdrop-filter: blur(8px); /* efecto vidrio */
+    background: rgba(0, 0, 0, 0.95);
     position: absolute;
     top: 60px;
     right: 20px;
@@ -459,7 +464,7 @@ footer {
     position: static;
     display: none;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.65);
+    background: rgba(0, 0, 0, 0.85);
     margin-top: 5px;
     border-radius: 5px;
     padding: 10px;
