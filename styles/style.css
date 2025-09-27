@@ -158,29 +158,27 @@ HEADER + HERO
   transform: translateX(-50%) scale(1.05);
 }
 
-/* NAVBAR GENERAL */
 .navigator {
-  position: absolute;   /* queda sobre el slider */
+  position: absolute;   /* flota sobre el carrusel */
   top: 0;
   left: 0;
   width: 100%;
-  background: transparent; /* transparente para que se vea el slider */
-  z-index: 1000;
-  padding: 10px 20px;
+  background: transparent; /* transparente total */
+  z-index: 10;
+  padding: 10px 0;
 }
 
-/* CONTENEDOR INTERNO */
 .nav-container {
   display: flex;
-  justify-content: space-between; /* logo a la izq, menú/hamburguesa a la der */
+  justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
 }
 
-/* LOGO */
-.logo img {
-  height: 55px;   /* ajustá el tamaño del logo */
-  width: auto;
-  display: block;
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
 }
 
 /* Animación de X */
