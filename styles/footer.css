@@ -95,6 +95,7 @@
   display: flex;
   gap: 20px;
   align-items: center;
+  
 }
 
 .footer-redes .social-icons a {
@@ -142,6 +143,7 @@
     flex-direction: column;
     text-align: center;
     gap: 30px;
+    justify-content: center;
   }
 
   .footer-contacto li,

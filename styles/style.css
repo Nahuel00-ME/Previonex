@@ -142,16 +142,11 @@ HEADER + HERO
   left: 50%;
   transform: translateX(-50%);
   color: #000000;
-  padding: 18px 35px;
   text-decoration: none;
   font-weight: bold;
-  backdrop-filter: blur(4px); /* efecto cristalino */
-
-  font-size: 28px;
+  font-size: 35px;
 }
 .btn-slide:hover {
-  background: rgba(0, 195, 255, 0.4); /* más marcado */
-  border-color: #00c3ff;               /* borde brillante */
   transform: translateX(-50%) scale(1.05);
 }
 
@@ -181,9 +176,10 @@ HEADER + HERO
 
 .logo-img{
  display: block;
-  height: 55px;   /* ajusta tamaño del logo */
+  height: 110px;   /* ajusta tamaño del logo */
   width: auto;
-  
+  object-fit: cover;
+
 } 
 
 /* Animación de X */
