@@ -158,14 +158,14 @@ HEADER + HERO
   transform: translateX(-50%) scale(1.05);
 }
 
-navigator {
-  position: fixed;   /* ahora siempre arriba, aunque scrollees */
+.navigator {
+  position: absolute;   /* flota sobre el carrusel */
   top: 0;
   left: 0;
   width: 100%;
-  background: transparent; /* transparente para que se vea el slider detrás */
-  z-index: 1000;  /* más alto que el slider */
-  padding: 10px 20px;
+  background: transparent; /* transparente total */
+  z-index: 10;
+  padding: 10px 0;
 }
 
 .nav-container {
@@ -175,12 +175,12 @@ navigator {
   padding: 0 20px;
 }
 
-
-.logo  {
+.logo {
   height: 55px;   /* ajusta tamaño del logo */
   width: auto;
   display: block;
 }
+
 /* Animación de X */
 .hamburger.open {
   transform: rotate(90deg);
