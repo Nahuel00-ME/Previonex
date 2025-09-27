@@ -176,7 +176,7 @@ navigator {
 }
 
 
-.logo img {
+.logo  {
   height: 55px;   /* ajusta tamaño del logo */
   width: auto;
   display: block;
