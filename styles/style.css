@@ -178,8 +178,6 @@ HEADER + HERO
  display: block;
   height: 110px;   /* ajusta tamaño del logo */
   width: auto;
-  object-fit: cover;
-
 } 
 
 /* Animación de X */
