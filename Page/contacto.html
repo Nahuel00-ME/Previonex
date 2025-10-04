@@ -51,20 +51,29 @@
 <div id="form-message" class="form-message"></div>
    
  <form action="https://formsubmit.co/ezequielnahuel11@gmail.com" method="POST" class="contact-form" id="form-contacto">
-  <div class="input-group">
+ <div class="input-group">
     <input type="text" name="nombre" placeholder="Nombre" required>
+    <span class="valid-icon"></span>
   </div>
+
   <div class="input-group">
     <input type="email" name="email" placeholder="Email" required>
+    <span class="valid-icon"></span>
   </div>
+
   <div class="input-group">
     <input type="text" name="empresa" placeholder="Empresa">
+    <span class="valid-icon"></span>
   </div>
+
   <div class="input-group">
     <input type="tel" name="telefono" placeholder="Teléfono">
+    <span class="valid-icon"></span>
   </div>
+
   <div class="input-group">
     <textarea name="mensaje" cols="30" rows="6" placeholder="Mensaje" required></textarea>
+    <span class="valid-icon"></span>
   </div>
 
   <!-- Config extras -->
@@ -130,5 +139,10 @@
 
 <script type="module" src="../javaScript/validacionSimple.js"></script>
   <script src="../javaScript/menuHAmburguesa.js"></script>
+  <a href="https://wa.me/5491159140275?text=Hola,%20vi%20tu%20página%20y%20quiero%20más%20info" 
+   class="btn-whatsapp" id="btn-whatsapp" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
+</a>
+
 </body>
 </html>

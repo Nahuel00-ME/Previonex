@@ -39,6 +39,42 @@
 }
 
 
+#btn-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  z-index: 1000;
+  opacity: 0;                 /* oculto al inicio */
+  transform: translateY(100px); /* posición inicial abajo */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  pointer-events: none;       /* no clickeable hasta que aparezca */
+}
+
+#btn-whatsapp.show {
+  opacity: 1;
+  transform: translateY(0);   /* se desliza hacia arriba */
+  pointer-events: auto;
+}
+
+#btn-whatsapp:hover {
+  transform: translateY(0) scale(1.1); /* pequeño zoom al pasar mouse */
+}
+
+#btn-whatsapp img {
+  width: 35px;
+  height: 35px;
+}
+
+
+
 .form-message {
   display: none;
   margin-bottom: 15px;
@@ -140,7 +176,22 @@
 }
 
 /* Responsive */
+
+
+
+@media (max-width: 1024px) {
+  #btn-whatsapp {
+     width: 55px;
+      height: 55px;
+     }
+  #btn-whatsapp img { 
+    width: 30px; 
+    height: 30px;
+   }
+}
+
 @media (max-width: 768px) {
+
   .contact-form {
     margin: 0 20px;
   }
@@ -177,6 +228,19 @@
   background-color: #f44336;
   color: white;
 }
+
+ #btn-whatsapp{ 
+  width: 50px;
+   height: 50px; 
+   bottom: 15px; 
+   right: 15px; 
+  }
+  #btn-whatsapp img
+   {
+     width: 28px;
+      height: 28px;
+     }
+
 
 
 }
