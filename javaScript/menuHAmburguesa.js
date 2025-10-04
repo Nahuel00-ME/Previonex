@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (window.innerWidth <= 768) {
             e.preventDefault();
             e.stopPropagation();
-            serviciosLi.classList.toggle("open");
+            serviciosLi.classList.toggle("active");
         }
     });
 });
