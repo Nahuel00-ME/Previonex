@@ -372,7 +372,7 @@ footer {
   .inicio-top {
  text-align: center;
  color:#00c3ff;
-;
+padding: 0px;
   margin: 0;
   background-color: #f9f9f9;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -425,46 +425,53 @@ footer {
   z-index: 1100; /* que quede arriba del menú */
 }
 
-/* Links ocultos por defecto en móvil */
+/* Menú móvil (sale desde abajo del botón hamburguesa) */
 .nav-container .nav-links {
   display: none;
   flex-direction: column;
   gap: 15px;
   background: rgba(0, 0, 0, 0.95);
   position: absolute;
-  top: 60px;
-  right: 20px;
+  top: 60px;       /* justo debajo del nav */
+  left: 0;         /* arranca desde la izquierda */
+  right: 0;        /* ocupa todo el ancho */
   padding: 20px;
-  border-radius: 8px;
-  width: 250px;
-  text-align: right;
+  border-radius: 0 0 8px 8px;
+  text-align: center;
   z-index: 1000;
+
+  /* Animación inicial */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
 }
 
-/* Cuando el nav-container tiene la clase active → se muestran */
+/* Cuando está activo, se expande con slide-down */
 .nav-container.active .nav-links {
   display: flex;
+  max-height: 500px; /* lo suficiente para mostrar todo */
+  padding: 20px;
 }
 
-/* Submenú en móvil */
+/* Submenú */
 .nav-links li ul {
-  position: static;
-  display: none;
+  display: flex;
   flex-direction: column;
   background: rgba(0, 0, 0, 0.85);
   margin-top: 5px;
   border-radius: 5px;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+/* Cuando está abierto el submenú */
+.nav-links li.open > ul {
+  max-height: 400px;
   padding: 10px;
 }
 
-.nav-links li.open > ul {
-  display: flex;
-}
-
-/* Desactiva hover en móvil */
-.nav-links li:hover ul {
-  display: none;
-}
 
 }
 
@@ -473,7 +480,7 @@ footer {
   .inicio-top {
  text-align: center;
 color: #00c3ff;
-
+ padding: 0px;
   margin: 0;
  
   background-color: #f9f9f9;
@@ -505,40 +512,53 @@ color: #00c3ff;
 
 /* Links ocultos por defecto en móvil */
 /* Contenedor móvil */
+/* Menú móvil (sale desde abajo del botón hamburguesa) */
 .nav-container .nav-links {
   display: none;
   flex-direction: column;
   gap: 15px;
   background: rgba(0, 0, 0, 0.95);
   position: absolute;
-  top: 60px;
-  right: 20px;
+  top: 60px;       /* justo debajo del nav */
+  left: 0;         /* arranca desde la izquierda */
+  right: 0;        /* ocupa todo el ancho */
   padding: 20px;
-  border-radius: 8px;
-  width: 250px;
-  text-align: right;
+  border-radius: 0 0 8px 8px;
+  text-align: center;
   z-index: 1000;
+
+  /* Animación inicial */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
 }
 
+/* Cuando está activo, se expande con slide-down */
 .nav-container.active .nav-links {
   display: flex;
+  max-height: 500px; /* lo suficiente para mostrar todo */
+  padding: 20px;
 }
 
 /* Submenú */
 .nav-links li ul {
-  display: none;
+  display: flex;
   flex-direction: column;
   background: rgba(0, 0, 0, 0.85);
   margin-top: 5px;
   border-radius: 5px;
-  padding: 10px;
-  position: relative;
-  z-index: 1100; /* que quede clickeable por encima */
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
 }
 
+/* Cuando está abierto el submenú */
 .nav-links li.open > ul {
-  display: flex;
+  max-height: 400px;
+  padding: 10px;
 }
+
 
 
 }

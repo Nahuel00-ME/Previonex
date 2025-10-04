@@ -17,7 +17,7 @@
     <div class="hamburger">☰</div>
     <ul class="nav-links">
       <li><a href="../index.html">Inicio</a></li>
-      <li>
+      <li class="has-submenu">
        <a href="#"  class="submenu-toggle">Servicios <span class="arrow">▼</span></a>
         <ul>
           <li><a href="servicios.html">Estudios y Evaluaciones</a></li>
@@ -47,30 +47,31 @@
  <div class="section section--light">
   <h2 class="section__title">Contactanos</h2>
   <p class="section__intro">Envíanos tu consulta y nos pondremos en contacto contigo lo antes posible.</p>
+ 
+<div id="form-message" class="form-message"></div>
+   
+ <form action="https://formsubmit.co/ezequielnahuel11@gmail.com" method="POST" class="contact-form" id="form-contacto">
+  <div class="input-group">
+    <input type="text" name="nombre" placeholder="Nombre" required>
+  </div>
+  <div class="input-group">
+    <input type="email" name="email" placeholder="Email" required>
+  </div>
+  <div class="input-group">
+    <input type="text" name="empresa" placeholder="Empresa">
+  </div>
+  <div class="input-group">
+    <input type="tel" name="telefono" placeholder="Teléfono">
+  </div>
+  <div class="input-group">
+    <textarea name="mensaje" cols="30" rows="6" placeholder="Mensaje" required></textarea>
+  </div>
 
-  <form class="contact-form" id="form-contacto">
-    <div class="input-group">
-      <input type="text" name="nombre" placeholder="Nombre" id="nombre">
-      <span class="valid-icon"></span>
-    </div>
-    <div class="input-group">
-      <input type="email" name="email" placeholder="Email" id="email">
-      <span class="valid-icon"></span>
-    </div>
-    <div class="input-group">
-      <input type="text" name="empresa" placeholder="Empresa" id="empresa">
-      <span class="valid-icon"></span>
-    </div>
-    <div class="input-group">
-      <input type="tel" name="telefono" placeholder="Teléfono" id="telefono">
-      <span class="valid-icon"></span>
-    </div>
-    <div class="input-group">
-      <textarea name="mensaje" cols="30" rows="6" placeholder="Mensaje" id="mensaje"></textarea>
-      <span class="valid-icon"></span>
-    </div>
-    <button type="submit">Enviar mensaje</button>
-  </form>
+  <!-- Config extras -->
+  <input type="hidden" name="_captcha" value="false">
+
+  <button type="submit">Enviar mensaje</button>
+</form>
 </div>
 
 
