@@ -124,6 +124,18 @@
   .contact-form {
     margin: 0 20px;
   }
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 5px 12px 5px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  background: #fff; /* Blanco como las cards */
+  color: #333;
+}
 
 
 }
