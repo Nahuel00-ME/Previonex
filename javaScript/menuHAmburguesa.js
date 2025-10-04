@@ -1,21 +1,39 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // --- MENU HAMBURGUESA ---
   const hamburger = document.querySelector(".hamburger");
-  const navContainer = document.querySelector(".nav-container");
-  const serviciosLink = document.querySelector(".submenu-toggle");
-  const serviciosLi = serviciosLink.parentElement;
+  const navLinks = document.querySelector(".nav-links");
+  const submenuToggle = document.querySelector(".submenu-toggle");
+  const submenuLi = submenuToggle.parentElement;
 
-  // Hamburguesa
   hamburger.addEventListener("click", (e) => {
     e.stopPropagation();
-    navContainer.classList.toggle("active");
+    navLinks.classList.toggle("active-menu");
   });
 
-  // Submenú solo en móvil
-  serviciosLink.addEventListener("click", (e) => {
+  submenuToggle.addEventListener("click", (e) => {
     if (window.innerWidth <= 768) {
       e.preventDefault();
       e.stopPropagation();
-      serviciosLi.classList.toggle("open");
+      submenuLi.classList.toggle("active-submenu");
+    }
+  });
+
+  // Cerrar menú si se hace click fuera
+  document.addEventListener("click", () => {
+    navLinks.classList.remove("active-menu");
+    submenuLi.classList.remove("active-submenu");
+  });
+
+  navLinks.addEventListener("click", (e) => e.stopPropagation());
+
+  // --- BOTON WHATSAPP ---
+  const btnWhatsapp = document.getElementById("btn-whatsapp");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      btnWhatsapp.classList.add("show");
+    } else {
+      btnWhatsapp.classList.remove("show");
     }
   });
 });
+

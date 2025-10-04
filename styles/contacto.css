@@ -52,27 +52,26 @@
   justify-content: center;
   box-shadow: 0 4px 6px rgba(0,0,0,0.3);
   z-index: 1000;
-  opacity: 0;                 /* oculto al inicio */
-  transform: translateY(100px); /* posición inicial abajo */
+  opacity: 0;
+  transform: translateY(100px);
   transition: transform 0.5s ease, opacity 0.5s ease;
-  pointer-events: none;       /* no clickeable hasta que aparezca */
+  pointer-events: none;
 }
 
 #btn-whatsapp.show {
   opacity: 1;
-  transform: translateY(0);   /* se desliza hacia arriba */
+  transform: translateY(0);
   pointer-events: auto;
 }
 
 #btn-whatsapp:hover {
-  transform: translateY(0) scale(1.1); /* pequeño zoom al pasar mouse */
+  transform: translateY(0) scale(1.1);
 }
 
 #btn-whatsapp img {
   width: 35px;
   height: 35px;
 }
-
 
 
 .form-message {
