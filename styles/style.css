@@ -504,6 +504,7 @@ color: #00c3ff;
 }
 
 /* Links ocultos por defecto en móvil */
+/* Contenedor móvil */
 .nav-container .nav-links {
   display: none;
   flex-direction: column;
@@ -519,30 +520,26 @@ color: #00c3ff;
   z-index: 1000;
 }
 
-/* Cuando el nav-container tiene la clase active → se muestran */
 .nav-container.active .nav-links {
   display: flex;
 }
 
-/* Submenú en móvil */
+/* Submenú */
 .nav-links li ul {
-  position: static;
   display: none;
   flex-direction: column;
   background: rgba(0, 0, 0, 0.85);
   margin-top: 5px;
   border-radius: 5px;
   padding: 10px;
+  position: relative;
+  z-index: 1100; /* que quede clickeable por encima */
 }
 
 .nav-links li.open > ul {
   display: flex;
 }
 
-/* Desactiva hover en móvil */
-.nav-links li:hover ul {
-  display: none;
-}
 
 }
 
