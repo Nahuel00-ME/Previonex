@@ -315,47 +315,55 @@ footer {
         font-size: 1.1rem;
         padding: 35px 60px;
     }
-      .hamburger {
-    display: block;
-  }
+  /* Botón hamburguesa */
+.hamburger {
+  display: block;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1100; /* que quede arriba del menú */
+}
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 15px;
-    background: rgba(0, 0, 0, 0.95);
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    width: 250px;
-    text-align: right;
-  }
+/* Links ocultos por defecto en móvil */
+.nav-container .nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  background: rgba(0, 0, 0, 0.95);
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  text-align: right;
+  z-index: 1000;
+}
 
-  .nav-links.active {
-    display: flex;
-  }
+/* Cuando el nav-container tiene la clase active → se muestran */
+.nav-container.active .nav-links {
+  display: flex;
+}
 
-  /* Submenú en móvil */
-  .nav-links li ul {
-    position: static;
-    display: none;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.85);
-    margin-top: 5px;
-    border-radius: 5px;
-    padding: 10px;
-  }
+/* Submenú en móvil */
+.nav-links li ul {
+  position: static;
+  display: none;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.85);
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 10px;
+}
 
-  .nav-links li.open > ul {
-    display: flex;
-  }
+.nav-links li.open > ul {
+  display: flex;
+}
 
-  /* Desactiva hover en móvil */
-  .nav-links li:hover ul {
-    display: none;
-  }
+/* Desactiva hover en móvil */
+.nav-links li:hover ul {
+  display: none;
+}
+
 }
 
 
@@ -409,49 +417,55 @@ footer {
   }
 
 
-  .hamburger {
-    display: block;
-  }
+ /* Botón hamburguesa */
+.hamburger {
+  display: block;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1100; /* que quede arriba del menú */
+}
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 15px;
-    /* transparente para ver fondo */
-    background: rgba(0, 0, 0, 0.5); 
-    backdrop-filter: blur(8px); /* efecto vidrio */
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    width: 250px;
-    text-align: right;
-  }
+/* Links ocultos por defecto en móvil */
+.nav-container .nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  background: rgba(0, 0, 0, 0.95);
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  text-align: right;
+  z-index: 1000;
+}
 
-  .nav-links.active {
-    display: flex;
-  }
+/* Cuando el nav-container tiene la clase active → se muestran */
+.nav-container.active .nav-links {
+  display: flex;
+}
 
-  /* Submenú en móvil */
-  .nav-links li ul {
-    position: static;
-    display: none;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.65);
-    margin-top: 5px;
-    border-radius: 5px;
-    padding: 10px;
-  }
+/* Submenú en móvil */
+.nav-links li ul {
+  position: static;
+  display: none;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.85);
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 10px;
+}
 
-  .nav-links li.open > ul {
-    display: flex;
-  }
+.nav-links li.open > ul {
+  display: flex;
+}
 
-  /* Desactiva hover en móvil */
-  .nav-links li:hover ul {
-    display: none;
-  }
+/* Desactiva hover en móvil */
+.nav-links li:hover ul {
+  display: none;
+}
+
 }
 
 @media (max-width: 480px) {
@@ -481,55 +495,54 @@ color: #00c3ff;
     text-align: justify;
   }
 
-  .hamburger {
-    display: block;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 1001;
+/* Botón hamburguesa */
+.hamburger {
+  display: block;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1100; /* que quede arriba del menú */
 }
 
-.nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 15px;
-    background: rgba(0, 0, 0, 0.95);
-    position: fixed;
-    top: 60px;
-    right: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    width: 250px;
-    text-align: right;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    transition: opacity 0.3s ease;
+/* Links ocultos por defecto en móvil */
+.nav-container .nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  background: rgba(0, 0, 0, 0.95);
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  text-align: right;
+  z-index: 1000;
 }
 
-.nav-links.active {
-    display: flex;
-    opacity: 1;
+/* Cuando el nav-container tiene la clase active → se muestran */
+.nav-container.active .nav-links {
+  display: flex;
 }
 
 /* Submenú en móvil */
 .nav-links li ul {
-    position: static;
-    display: none;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.85);
-    margin-top: 5px;
-    border-radius: 5px;
-    padding: 10px;
-    transition: all 0.3s ease;
+  position: static;
+  display: none;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.85);
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .nav-links li.open > ul {
-    display: flex;
-    animation: slideIn 0.3s ease;
+  display: flex;
 }
 
 /* Desactiva hover en móvil */
+.nav-links li:hover ul {
+  display: none;
+}
 
-    .nav-links li:hover ul {
-        display: none;
-    }
 }
 
