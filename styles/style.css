@@ -316,54 +316,60 @@ footer {
         padding: 35px 60px;
     }
   /* Botón hamburguesa */
-.hamburger {
-  display: block;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 1100; /* que quede arriba del menú */
-}
+ .hamburger {
+    display: block;
+  }
 
-/* Links ocultos por defecto en móvil */
-.nav-container .nav-links {
-  display: none;
-  flex-direction: column;
-  gap: 15px;
-  background: rgba(0, 0, 0, 0.95);
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  padding: 20px;
-  border-radius: 8px;
-  width: 250px;
-  text-align: right;
-  z-index: 1000;
-}
+  .nav-container .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 60px;       /* justo debajo del nav */
+    left: 0;         
+    right: 0;        
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+    text-align: center;
+    z-index: 1000;
 
-/* Cuando el nav-container tiene la clase active → se muestran */
-.nav-container.active .nav-links {
-  display: flex;
-}
+    /* Animación inicial */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+  }
 
-/* Submenú en móvil */
-.nav-links li ul {
-  position: static;
-  display: none;
-  flex-direction: column;
-  background: rgba(0, 0, 0, 0.85);
-  margin-top: 5px;
-  border-radius: 5px;
-  padding: 10px;
-}
+  /* Cuando el menú hamburguesa está activo */
+  .nav-links.active-menu {
+    display: flex;
+    max-height: 500px; /* lo suficiente para mostrar todo */
+    padding: 20px;
+  }
 
-.nav-links li.open > ul {
-  display: flex;
-}
+  /* Submenú */
+  .nav-links li ul {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.85);
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+  }
 
-/* Desactiva hover en móvil */
-.nav-links li:hover ul {
-  display: none;
-}
+  /* Cuando el submenú está activo */
+  .nav-links li.active-submenu > ul {
+    max-height: 400px;
+    padding: 10px;
+  }
 
+  /* Desactiva hover en móvil */
+  .nav-links li:hover ul {
+    display: none;
+  }
 }
 
 
@@ -418,15 +424,11 @@ padding: 0px;
 
 
  /* Botón hamburguesa */
-.hamburger {
-  display: block;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 1100; /* que quede arriba del menú */
-}
+ .hamburger {
+    display: block;
+  }
 
-/* Menú móvil (sale desde abajo del botón hamburguesa) */
-.nav-container .nav-links {
+  .nav-container .nav-links {
     display: none;
     flex-direction: column;
     gap: 15px;
@@ -506,15 +508,11 @@ padding: 0px;
   }
 
 /* Botón hamburguesa */
-.hamburger {
-  display: block;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 1100; /* que quede arriba del menú */
-}
+ .hamburger {
+    display: block;
+  }
 
-/* Menú móvil (sale desde abajo del botón hamburguesa) */
-.nav-container .nav-links {
+  .nav-container .nav-links {
     display: none;
     flex-direction: column;
     gap: 15px;
@@ -527,6 +525,7 @@ padding: 0px;
     border-radius: 0 0 8px 8px;
     text-align: center;
     z-index: 1000;
+
     /* Animación inicial */
     max-height: 0;
     overflow: hidden;
