@@ -315,60 +315,67 @@ footer {
         font-size: 1.1rem;
         padding: 35px 60px;
     }
-  /* Botón hamburguesa */
- .hamburger {
-    display: block;
+  
+  /* Ocultar checkboxes */
+  .menu-toggle,
+  .submenu-toggle {
+    display: none;
   }
 
-  .nav-container .nav-links {
+  /* Hamburger */
+  .hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  /* Menú oculto por defecto */
+  .nav-links {
     display: none;
     flex-direction: column;
     gap: 15px;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(0,0,0,0.95);
     position: absolute;
-    top: 100%;       /* justo debajo del nav */
-    left: 0;         
-    right: 0;        
-    padding: 20px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 0;
     border-radius: 0 0 8px 8px;
     text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
     z-index: 1500;
+  }
 
-    /* Animación inicial */
+  /* Abrir menú cuando checkbox hamburguesa está checked */
+  .menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+    max-height: 600px;
+    padding: 20px;
+  }
+
+  /* Submenu oculto */
+  .nav-links li ul {
+    display: block;
+    background: rgba(0,0,0,0.85);
+    padding: 0;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease, padding 0.3s ease;
   }
 
-  /* Cuando el menú hamburguesa está activo */
-  .nav-links.active-menu {
-    display: flex;
-    max-height: 500px; /* lo suficiente para mostrar todo */
-    padding: 20px;
+  /* Submenu visible si su checkbox está checked */
+  .nav-links li .submenu-toggle:checked + label + ul {
+    max-height: 500px;
+    padding: 10px;
   }
 
-  /* Submenú */
-  /* Submenú (oculto inicialmente) */
-.nav-links li ul {
-  display: block;                /* cambia de flex a block para que se pueda animar */
-  background: rgba(0, 0, 0, 0.85);
-  margin-top: 5px;
-  border-radius: 5px;
-  padding: 0;
-  max-height: 0;                 /* cerrado por defecto */
-  overflow: hidden;              /* oculta contenido al cerrar */
-  transition: max-height 0.4s ease, padding 0.3s ease;
-}
-
-/* Submenú activo (abre con slide-down) */
-.nav-links li.active-submenu > ul {
-  max-height: 500px;             /* suficiente para mostrar los links */
-  padding: 10px;
-}
-
-  /* Desactiva hover en móvil */
-  .nav-links li:hover ul {
-    display: none;
+  /* Links del submenu centrados */
+  .nav-links li ul li a {
+    text-align: center;
+    padding: 12px 0;
+    display: block;
   }
 }
 
@@ -423,60 +430,67 @@ padding: 0px;
   }
 
 
- /* Botón hamburguesa */
- .hamburger {
-    display: block;
+ 
+  /* Ocultar checkboxes */
+  .menu-toggle,
+  .submenu-toggle {
+    display: none;
   }
 
-  .nav-container .nav-links {
+  /* Hamburger */
+  .hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  /* Menú oculto por defecto */
+  .nav-links {
     display: none;
     flex-direction: column;
     gap: 15px;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(0,0,0,0.95);
     position: absolute;
-    top: 100%;       /* justo debajo del nav */
-    left: 0;         
-    right: 0;        
-    padding: 20px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 0;
     border-radius: 0 0 8px 8px;
     text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
     z-index: 1500;
+  }
 
-    /* Animación inicial */
+  /* Abrir menú cuando checkbox hamburguesa está checked */
+  .menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+    max-height: 600px;
+    padding: 20px;
+  }
+
+  /* Submenu oculto */
+  .nav-links li ul {
+    display: block;
+    background: rgba(0,0,0,0.85);
+    padding: 0;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease, padding 0.3s ease;
   }
 
-  /* Cuando el menú hamburguesa está activo */
-  .nav-links.active-menu {
-    display: flex;
-    max-height: 500px; /* lo suficiente para mostrar todo */
-    padding: 20px;
+  /* Submenu visible si su checkbox está checked */
+  .nav-links li .submenu-toggle:checked + label + ul {
+    max-height: 500px;
+    padding: 10px;
   }
 
-  /* Submenú */
- /* Submenú (oculto inicialmente) */
-.nav-links li ul {
-  display: block;                /* cambia de flex a block para que se pueda animar */
-  background: rgba(0, 0, 0, 0.85);
-  margin-top: 5px;
-  border-radius: 5px;
-  padding: 0;
-  max-height: 0;                 /* cerrado por defecto */
-  overflow: hidden;              /* oculta contenido al cerrar */
-  transition: max-height 0.4s ease, padding 0.3s ease;
-}
-
-/* Submenú activo (abre con slide-down) */
-.nav-links li.active-submenu > ul {
-  max-height: 500px;             /* suficiente para mostrar los links */
-  padding: 10px;
-}
-
-  /* Desactiva hover en móvil */
-  .nav-links li:hover ul {
-    display: none;
+  /* Links del submenu centrados */
+  .nav-links li ul li a {
+    text-align: center;
+    padding: 12px 0;
+    display: block;
   }
 }
 
@@ -507,60 +521,67 @@ padding: 0px;
     text-align: justify;
   }
 
-/* Botón hamburguesa */
- .hamburger {
-    display: block;
+
+  /* Ocultar checkboxes */
+  .menu-toggle,
+  .submenu-toggle {
+    display: none;
   }
 
-  .nav-container .nav-links {
+  /* Hamburger */
+  .hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  /* Menú oculto por defecto */
+  .nav-links {
     display: none;
     flex-direction: column;
     gap: 15px;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(0,0,0,0.95);
     position: absolute;
-    top: 100%;       /* justo debajo del nav */
-    left: 0;         
-    right: 0;        
-    padding: 20px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 0;
     border-radius: 0 0 8px 8px;
     text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
     z-index: 1500;
+  }
 
-    /* Animación inicial */
+  /* Abrir menú cuando checkbox hamburguesa está checked */
+  .menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+    max-height: 600px;
+    padding: 20px;
+  }
+
+  /* Submenu oculto */
+  .nav-links li ul {
+    display: block;
+    background: rgba(0,0,0,0.85);
+    padding: 0;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease, padding 0.3s ease;
   }
 
-  /* Cuando el menú hamburguesa está activo */
-  .nav-links.active-menu {
-    display: flex;
-    max-height: 500px; /* lo suficiente para mostrar todo */
-    padding: 20px;
+  /* Submenu visible si su checkbox está checked */
+  .nav-links li .submenu-toggle:checked + label + ul {
+    max-height: 500px;
+    padding: 10px;
   }
 
-  /* Submenú */
- /* Submenú (oculto inicialmente) */
-.nav-links li ul {
-  display: block;                /* cambia de flex a block para que se pueda animar */
-  background: rgba(0, 0, 0, 0.85);
-  margin-top: 5px;
-  border-radius: 5px;
-  padding: 0;
-  max-height: 0;                 /* cerrado por defecto */
-  overflow: hidden;              /* oculta contenido al cerrar */
-  transition: max-height 0.4s ease, padding 0.3s ease;
-}
-
-/* Submenú activo (abre con slide-down) */
-.nav-links li.active-submenu > ul {
-  max-height: 500px;             /* suficiente para mostrar los links */
-  padding: 10px;
-}
-
-  /* Desactiva hover en móvil */
-  .nav-links li:hover ul {
-    display: none;
+  /* Links del submenu centrados */
+  .nav-links li ul li a {
+    text-align: center;
+    padding: 12px 0;
+    display: block;
   }
 }
 
