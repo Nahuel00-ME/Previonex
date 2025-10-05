@@ -347,24 +347,35 @@ footer {
     padding: 20px;
   }
 
-  /* Submenú */
-  .nav-links li ul {
-    display: flex;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.85);
-    margin-top: 5px;
-    border-radius: 5px;
-    padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s ease;
-  }
+/* Submenú (oculto inicialmente) */
+.nav-links li ul {
+  display: flex;                 /* flex para centrar */
+  flex-direction: column;        /* uno debajo del otro */
+  align-items: center;           /* centrado horizontal */
+  background: rgba(0, 0, 0, 0.95);
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 0;
+  width: 100%;                   /* ocupa todo el ancho */
+  max-height: 0;                 /* cerrado por defecto */
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
 
-  /* Cuando el submenú está activo */
-  .nav-links li.active-submenu > ul {
-    max-height: 400px;
-    padding: 10px;
-  }
+/* Submenú activo (abre con slide-down) */
+.nav-links li.active-submenu > ul {
+  max-height: 500px;
+  padding: 20px 0;
+}
+
+/* Estilo de los enlaces dentro del submenú */
+.nav-links li ul li a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
 
   /* Desactiva hover en móvil */
   .nav-links li:hover ul {
@@ -455,24 +466,34 @@ padding: 0px;
     padding: 20px;
   }
 
-  /* Submenú */
-  .nav-links li ul {
-    display: flex;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.85);
-    margin-top: 5px;
-    border-radius: 5px;
-    padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s ease;
-  }
+/* Submenú (oculto inicialmente) */
+.nav-links li ul {
+  display: flex;                 /* flex para centrar */
+  flex-direction: column;        /* uno debajo del otro */
+  align-items: center;           /* centrado horizontal */
+  background: rgba(0, 0, 0, 0.95);
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 0;
+  width: 100%;                   /* ocupa todo el ancho */
+  max-height: 0;                 /* cerrado por defecto */
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
 
-  /* Cuando el submenú está activo */
-  .nav-links li.active-submenu > ul {
-    max-height: 400px;
-    padding: 10px;
-  }
+/* Submenú activo (abre con slide-down) */
+.nav-links li.active-submenu > ul {
+  max-height: 500px;
+  padding: 20px 0;
+}
+
+/* Estilo de los enlaces dentro del submenú */
+.nav-links li ul li a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
 
   /* Desactiva hover en móvil */
   .nav-links li:hover ul {
@@ -538,25 +559,34 @@ padding: 0px;
     max-height: 500px; /* lo suficiente para mostrar todo */
     padding: 20px;
   }
+/* Submenú (oculto inicialmente) */
+.nav-links li ul {
+  display: flex;                 /* flex para centrar */
+  flex-direction: column;        /* uno debajo del otro */
+  align-items: center;           /* centrado horizontal */
+  background: rgba(0, 0, 0, 0.95);
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 0;
+  width: 100%;                   /* ocupa todo el ancho */
+  max-height: 0;                 /* cerrado por defecto */
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
 
-  /* Submenú */
-  .nav-links li ul {
-    display: flex;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.85);
-    margin-top: 5px;
-    border-radius: 5px;
-    padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s ease;
-  }
+/* Submenú activo (abre con slide-down) */
+.nav-links li.active-submenu > ul {
+  max-height: 500px;
+  padding: 20px 0;
+}
 
-  /* Cuando el submenú está activo */
-  .nav-links li.active-submenu > ul {
-    max-height: 400px;
-    padding: 10px;
-  }
+/* Estilo de los enlaces dentro del submenú */
+.nav-links li ul li a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
 
   /* Desactiva hover en móvil */
   .nav-links li:hover ul {
