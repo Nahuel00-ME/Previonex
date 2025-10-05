@@ -259,6 +259,7 @@ HEADER + HERO
   min-width: 200px;
   background: rgba(0, 0, 0, 0.85);
   border-radius: 5px;
+  z-index: 1500;
 }
 
 .nav-links li ul li a {
@@ -269,6 +270,11 @@ HEADER + HERO
 .nav-links li:hover > ul {
   display: block;
 }
+
+.submenu-toggle,
+  label[for="submenu-toggle"] {
+    display: none;
+  }
 
 /* =========================
    HAMBURGUESA
@@ -431,7 +437,7 @@ padding: 0px;
 
 
  
-  /* Ocultar checkboxes */
+    /* Ocultar checkboxes por defecto */
   .menu-toggle,
   .submenu-toggle {
     display: none;
@@ -439,6 +445,7 @@ padding: 0px;
 
   /* Hamburger */
   .hamburger {
+    display: block;
     font-size: 2rem;
     cursor: pointer;
     color: #fff;
@@ -491,6 +498,15 @@ padding: 0px;
     text-align: center;
     padding: 12px 0;
     display: block;
+  }
+
+  /* Label del submenu como botón */
+  .nav-links li label[for="submenu-toggle"] {
+    display: block;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+    padding: 8px 0;
   }
 }
 
@@ -523,6 +539,7 @@ padding: 0px;
 
 
   /* Ocultar checkboxes */
+    /* Ocultar checkboxes por defecto */
   .menu-toggle,
   .submenu-toggle {
     display: none;
@@ -530,6 +547,7 @@ padding: 0px;
 
   /* Hamburger */
   .hamburger {
+    display: block;
     font-size: 2rem;
     cursor: pointer;
     color: #fff;
@@ -582,6 +600,15 @@ padding: 0px;
     text-align: center;
     padding: 12px 0;
     display: block;
+  }
+
+  /* Label del submenu como botón */
+  .nav-links li label[for="submenu-toggle"] {
+    display: block;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+    padding: 8px 0;
   }
 }
 
