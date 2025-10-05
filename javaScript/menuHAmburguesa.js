@@ -1,33 +1,57 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // --- MENU HAMBURGUESA ---
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks = document.querySelector(".nav-links");
-    const submenuToggle = document.querySelector(".submenu-toggle");
-    const submenuLi = submenuToggle.parentElement;
-
-    hamburger.addEventListener("click", (e) => {
+  // --- MENU HAMBURGUESA ---
+  const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const submenuToggles = document.querySelectorAll('.submenu-toggle');
+    
+    hamburger.addEventListener('click', (e) => {
         e.stopPropagation();
-        navLinks.classList.toggle("active-menu");
+        navLinks.classList.toggle('active');
         
-        // Si el menú se cierra, también cerramos el submenu
-        if (!navLinks.classList.contains("active-menu")) {
-            submenuLi.classList.remove("active-submenu");
-        }
+        // Cerrar todos los submenús cuando se abre/cierra el menú principal
+        document.querySelectorAll('.has-submenu').forEach(item => {
+            item.classList.remove('active-submenu');
+        });
     });
 
-    submenuToggle.addEventListener("click", (e) => {
-        if (window.innerWidth <= 768) {
-            e.preventDefault();
-            e.stopPropagation();
-            submenuLi.classList.toggle("active-submenu");
-        }
+    // Manejar cada submenu individualmente
+    submenuToggles.forEach(toggle => {
+        const submenuLi = toggle.parentElement;
+        
+        toggle.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                // Cerrar otros submenús abiertos
+                document.querySelectorAll('.has-submenu').forEach(item => {
+                    if (item !== submenuLi) {
+                        item.classList.remove('active-submenu');
+                    }
+                });
+                
+                // Alternar el submenu actual
+                submenuLi.classList.toggle('active-submenu');
+            }
+        });
     });
 
-    // Manejar click fuera solo cuando el menú está abierto
-    document.addEventListener("click", (e) => {
+    // Cerrar menús al hacer click fuera
+    document.addEventListener('click', (e) => {
         if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-            navLinks.classList.remove("active-menu");
-            submenuLi.classList.remove("active-submenu");
+            navLinks.classList.remove('active');
+            document.querySelectorAll('.has-submenu').forEach(item => {
+                item.classList.remove('active-submenu');
+            });
         }
-    });
+          // --- BOTON WHATSAPP ---
+  const btnWhatsapp = document.getElementById("btn-whatsapp");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      btnWhatsapp.classList.add("show");
+    } else {
+      btnWhatsapp.classList.remove("show");
+    }
+  });
 });
+
