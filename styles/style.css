@@ -437,77 +437,92 @@ padding: 0px;
 
 
  
-    /* Ocultar checkboxes por defecto */
-  .menu-toggle,
-  .submenu-toggle {
-    display: none;
-  }
+   .menu-toggle,
+.submenu-toggle {
+  display: none;
+}
 
-  /* Hamburger */
-  .hamburger {
-    display: block;
-    font-size: 2rem;
-    cursor: pointer;
-    color: #fff;
-  }
+/* Hamburger */
+.hamburger {
+  display: block;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+  z-index: 2000; /* siempre arriba */
+  position: relative;
+}
 
-  /* Menú oculto por defecto */
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 15px;
-    background: rgba(0,0,0,0.95);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    padding: 0;
-    border-radius: 0 0 8px 8px;
-    text-align: center;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s ease;
-    z-index: 1500;
-  }
+/* Menú oculto por defecto */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  background: rgba(0,0,0,0.95);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 0;
+  border-radius: 0 0 8px 8px;
+  text-align: center;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  z-index: 5000; /* más alto que el splide */
+}
 
-  /* Abrir menú cuando checkbox hamburguesa está checked */
-  .menu-toggle:checked + .hamburger + .nav-links {
-    display: flex;
-    max-height: 600px;
-    padding: 20px;
-  }
+/* Abrir menú cuando checkbox hamburguesa está checked */
+.menu-toggle:checked + .hamburger + .nav-links {
+  display: flex;
+  max-height: 600px;
+  padding: 20px 0; /* centrado vertical */
+}
 
-  /* Submenu oculto */
-  .nav-links li ul {
-    display: block;
-    background: rgba(0,0,0,0.85);
-    padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s ease;
-  }
+/* Submenu oculto */
+.nav-links li ul {
+  display: block;
+  background: rgba(0,0,0,0.85);
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  border-radius: 5px;
+  z-index: 6000; /* por encima del splide */
+  position: relative;
+}
 
-  /* Submenu visible si su checkbox está checked */
-  .nav-links li .submenu-toggle:checked + label + ul {
-    max-height: 500px;
-    padding: 10px;
-  }
+/* Submenu visible si su checkbox está checked */
+.nav-links li .submenu-toggle:checked + label + ul {
+  max-height: 500px;
+  padding: 10px 0;
+}
 
-  /* Links del submenu centrados */
-  .nav-links li ul li a {
-    text-align: center;
-    padding: 12px 0;
-    display: block;
-  }
+/* Links del submenu centrados */
+.nav-links li ul li a {
+  text-align: center;
+  padding: 12px 0;
+  display: block;
+}
 
-  /* Label del submenu como botón */
-  .nav-links li label[for="submenu-toggle"] {
-    display: block;
-    cursor: pointer;
-    font-weight: bold;
-    color: #fff;
-    padding: 8px 0;
-  }
+/* Label del submenu como botón */
+.nav-links li label[for="submenu-toggle"] {
+  display: block;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+  padding: 12px 0;
+  text-align: center; /* igual que Inicio/Contacto */
+  width: 100%;
+}
+
+/* Aseguramos que Inicio y Contacto queden centrados */
+.nav-links li a {
+  text-align: center;
+  width: 100%;
+  display: block;
+  padding: 12px 0;
+}
+
 }
 
 @media (max-width: 480px) {
@@ -541,75 +556,91 @@ padding: 0px;
   /* Ocultar checkboxes */
     /* Ocultar checkboxes por defecto */
   .menu-toggle,
-  .submenu-toggle {
-    display: none;
-  }
+.submenu-toggle {
+  display: none;
+}
 
-  /* Hamburger */
-  .hamburger {
-    display: block;
-    font-size: 2rem;
-    cursor: pointer;
-    color: #fff;
-  }
+/* Hamburger */
+.hamburger {
+  display: block;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+  z-index: 2000; /* siempre arriba */
+  position: relative;
+}
 
-  /* Menú oculto por defecto */
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 15px;
-    background: rgba(0,0,0,0.95);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    padding: 0;
-    border-radius: 0 0 8px 8px;
-    text-align: center;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s ease;
-    z-index: 1500;
-  }
+/* Menú oculto por defecto */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  background: rgba(0,0,0,0.95);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 0;
+  border-radius: 0 0 8px 8px;
+  text-align: center;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  z-index: 5000; /* más alto que el splide */
+}
 
-  /* Abrir menú cuando checkbox hamburguesa está checked */
-  .menu-toggle:checked + .hamburger + .nav-links {
-    display: flex;
-    max-height: 600px;
-    padding: 20px;
-  }
+/* Abrir menú cuando checkbox hamburguesa está checked */
+.menu-toggle:checked + .hamburger + .nav-links {
+  display: flex;
+  max-height: 600px;
+  padding: 20px 0; /* centrado vertical */
+}
 
-  /* Submenu oculto */
-  .nav-links li ul {
-    display: block;
-    background: rgba(0,0,0,0.85);
-    padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s ease;
-  }
+/* Submenu oculto */
+.nav-links li ul {
+  display: block;
+  background: rgba(0,0,0,0.85);
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  border-radius: 5px;
+  z-index: 6000; /* por encima del splide */
+  position: relative;
+}
 
-  /* Submenu visible si su checkbox está checked */
-  .nav-links li .submenu-toggle:checked + label + ul {
-    max-height: 500px;
-    padding: 10px;
-  }
+/* Submenu visible si su checkbox está checked */
+.nav-links li .submenu-toggle:checked + label + ul {
+  max-height: 500px;
+  padding: 10px 0;
+}
 
-  /* Links del submenu centrados */
-  .nav-links li ul li a {
-    text-align: center;
-    padding: 12px 0;
-    display: block;
-  }
+/* Links del submenu centrados */
+.nav-links li ul li a {
+  text-align: center;
+  padding: 12px 0;
+  display: block;
+}
 
-  /* Label del submenu como botón */
-  .nav-links li label[for="submenu-toggle"] {
-    display: block;
-    cursor: pointer;
-    font-weight: bold;
-    color: #fff;
-    padding: 8px 0;
-  }
+/* Label del submenu como botón */
+.nav-links li label[for="submenu-toggle"] {
+  display: block;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+  padding: 12px 0;
+  text-align: center; /* igual que Inicio/Contacto */
+  width: 100%;
+}
+
+/* Aseguramos que Inicio y Contacto queden centrados */
+.nav-links li a {
+  text-align: center;
+  width: 100%;
+  display: block;
+  padding: 12px 0;
+}
+
 }
 
 
