@@ -216,14 +216,16 @@ HEADER + HERO
 .nav-links {
   list-style: none;
   display: flex;
+  justify-content: center; /* centra todos los links horizontalmente */
   gap: 20px;
+  align-items: center;     /* alinea verticalmente todos los links */
 }
 
 .nav-links li {
   position: relative;
 }
 
-/* Links y label de submenu (desktop y móvil) */
+/* Links y label de submenu */
 .nav-links li a,
 .nav-links li label[for="submenu-toggle"] {
   color: #fff;
@@ -231,9 +233,10 @@ HEADER + HERO
   font-weight: bold;
   padding: 8px 12px;
   transition: color 0.3s;
-  display: block; /* importante para que tome padding */
+  display: inline-block;  /* evita que baje el texto como bloque */
   cursor: pointer;
   text-align: center;
+  vertical-align: middle; /* mantiene todos a la misma altura */
 }
 
 .nav-links li a:hover,
@@ -242,35 +245,32 @@ HEADER + HERO
 }
 
 /* =========================
-   SUBMENÚ
+   SUBMENÚ DESKTOP
 ========================= */
-
-/* Submenu oculto por defecto */
 .nav-links li ul {
   display: none;
-  position: absolute; /* desktop: sobre el slider */
+  position: absolute;
   top: 100%;
   left: 0;
   list-style: none;
   min-width: 200px;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0,0,0,0.85);
   border-radius: 5px;
   z-index: 2000;
   padding: 0;
 }
 
-/* Submenu links */
 .nav-links li ul li a {
+  display: block;
   padding: 10px 15px;
-  white-space: nowrap;
   text-align: center;
+  white-space: nowrap;
 }
 
-/* Desktop: mostrar submenu al hacer hover */
+/* Hover para desktop */
 .nav-links li:hover > ul {
   display: block;
 }
-
 /* =========================
    Opcional: hover en links del submenu (desktop)
 ========================= */
