@@ -248,7 +248,7 @@ HEADER + HERO
    SUBMENÚ DESKTOP
 ========================= */
 
-.submenu-toggle {
+.submenu-toggle  label{
   display: none;       /* no se ve ni ocupa espacio */
   position: absolute;
   opacity: 0;
@@ -256,6 +256,7 @@ HEADER + HERO
   height: 0;
   pointer-events: none;
 }
+
 .nav-links li ul {
   display: none;
   position: absolute;
